@@ -3,68 +3,74 @@ html{
 }
 
 body{
-	font-family: 'Roboto', Comic Sans MS, Comic Sans, cursive;
+	font-family: Arial, sans-serif;
 	font-size: 14px;
-	color:#474d59;
-	background: #84c4af;
+	background: #eeeeee;
+    margin: 0;
+    color: black;
 }
 
 ul{
 	list-style: none;
 }
-
-a{
-	text-decoration: none;
+h4{
+    border-bottom: solid #079a80 2px;
 }
-
-body{
-	margin: 0;
-}
-
 aside {
-    margin-left: 20px;
-    -webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
-    box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
-    border-radius: 7px;
+    background: white;
+    margin-top: 30px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    border-radius: 3px;
     padding: 10px;
-    width: 200px;
-    float: right;
-    margin-right: 38px;
    }
 
 .news{
-    margin-left: 38px;
-    -webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
-    box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
-    border-radius: 7px;
+    height: auto;
+    background: white;
+    margin-top: 30px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    border-radius: 3px;
 }
 
 .header_info{
    margin-top: 10px; color: white;
-   margin-left: 38px;
+   margin-left: 20px;
+   color: black;
+   font-weight: bold;
+   font-size: 12pt;
 }
 .fa-phone{
     color: #109c83;
+    font-weight: bold;
 }
 
 .fa-envelope{
     color: #109c83;
+    font-weight: bold;
 }
 
 .navbar-brand{
-    margin-left: 38px;
+    font-weight: bold;
+    margin-left: 20px;
 }
 
 .logo{
-    margin-left: 38px;
+    margin-left: 20px;
 }
 
 .header_admin{
    margin-top: 10px; color: white;
    margin-left: 130px;
+   color: black;
 }
 .form-inline{
-    margin-right: 38px;
+    margin-right: 20px;
+}
+.logo_image{
+    width: 350px;
+    height: 66px;
 }

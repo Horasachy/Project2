@@ -9,9 +9,9 @@
 </head>
 <body>
 	<!-- Контактная информация -->
-	<div class="container-fluid" style="background-color: #10252e;">
+	<div class="container-fluid" style="background-color: white;">
 		<div class="row">
-			<div class="col-9">
+			<div class="col-md-9">
 				<div class="header_info">
 					<p><i class="fa fa-phone" aria-hidden="true"></i> 123-123-123
 						|| 
@@ -26,17 +26,12 @@
 	<!-- Лого -->
 	<div class="container-fluid" style="margin-top: 10px;">
 		<div class="logo">
-			логолого
-			<br>
-			логолого
-			<br>
-			логолого
-			<br>
-			логолого
+		<img class="logo_image" src="../../public/images/logo.png">
 		</div>
 	</div>
 	<!-- Меню -->
-	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #10252e; margin-top: 10px;
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: white; margin-top: 10px;
+	font-weight: bold;
 	-webkit-box-shadow: -1px 10px 13px -11px rgba(0,0,0,0.6);
 	-moz-box-shadow: -1px 10px 13px -11px rgba(0,0,0,0.6);
 	box-shadow: -1px 10px 13px -11px rgba(0,0,0,0.6);">
@@ -81,6 +76,7 @@
 		</form>
 	</nav>
 	<!-- Конец меню -->
+	
 
 	<script src="../../public/js/jquery.min.js"></script>
 	<script src="../../public/js/all.js"></script>
