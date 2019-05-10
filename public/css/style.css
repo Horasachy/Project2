@@ -1,0 +1,70 @@
+html{
+	height: 100%;
+}
+
+body{
+	font-family: 'Roboto', Comic Sans MS, Comic Sans, cursive;
+	font-size: 14px;
+	color:#474d59;
+	background: #84c4af;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	margin: 0;
+}
+
+aside {
+    margin-left: 20px;
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
+    border-radius: 7px;
+    padding: 10px;
+    width: 200px;
+    float: right;
+    margin-right: 38px;
+   }
+
+.news{
+    margin-left: 38px;
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.6);
+    border-radius: 7px;
+}
+
+.header_info{
+   margin-top: 10px; color: white;
+   margin-left: 38px;
+}
+.fa-phone{
+    color: #109c83;
+}
+
+.fa-envelope{
+    color: #109c83;
+}
+
+.navbar-brand{
+    margin-left: 38px;
+}
+
+.logo{
+    margin-left: 38px;
+}
+
+.header_admin{
+   margin-top: 10px; color: white;
+   margin-left: 130px;
+}
+.form-inline{
+    margin-right: 38px;
+}

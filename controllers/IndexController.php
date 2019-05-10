@@ -2,29 +2,29 @@
 
 include_once ROOT. '/models/News.php';
 
-class NewsController {
 
+class IndexController {
+	public $pageData = array();
 	public function actionIndex()
 	{
-		
+		$this->pageData['title'] = "Новости";
 		$newsList = array();
 		$newsList = News::getNewsList();
-
-		require_once(ROOT . '/views/news/index.php');
-
+		
+		require_once(ROOT . '/views/main/index.php');
 		return true;
 	}
 
 	public function actionView($id)
 	{
+		
 		if ($id) {
 			$newsItem = News::getNewsItemByID($id);
+			$this->pageData['title'] = $newsItem['title'];
+			require_once(ROOT . '/views/news/view.php');
 
-	require_once(ROOT . '/views/news/view.php');
-
-/*			echo 'actionView'; */
 		}
-
+		
 		return true;
 
 	}
