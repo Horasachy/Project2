@@ -27,7 +27,8 @@ aside {
    }
 
 .news{
-    height: auto;
+    word-wrap:break-word;
+    overflow:hidden;
     background: white;
     margin-top: 30px;
     -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
@@ -71,6 +72,8 @@ aside {
     margin-right: 20px;
 }
 .logo_image{
+    margin: 20px 0px 20px 0px;
     width: 350px;
     height: 66px;
 }
+

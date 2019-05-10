@@ -32,9 +32,9 @@
 	<!-- Меню -->
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: white; margin-top: 10px;
 	font-weight: bold;
-	-webkit-box-shadow: -1px 10px 13px -11px rgba(0,0,0,0.6);
-	-moz-box-shadow: -1px 10px 13px -11px rgba(0,0,0,0.6);
-	box-shadow: -1px 10px 13px -11px rgba(0,0,0,0.6);">
+	-webkit-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.23);
+-moz-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.23);
+box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.23);">
 	<a class="navbar-brand" href="#">BASK</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
