@@ -26,7 +26,7 @@
 	<!-- Лого -->
 	<div class="container-fluid" style="margin-top: 10px;">
 		<div class="logo">
-		<img class="logo_image" src="../../public/images/logo.png">
+		<img class="logo_image" src="../../public/images/logo_green.png">
 		</div>
 	</div>
 	<!-- Меню -->
