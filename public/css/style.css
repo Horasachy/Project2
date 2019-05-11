@@ -27,17 +27,14 @@ aside {
     padding: 10px;
 }
 footer{
+    margin-top: 50px;
+    display: block;
     height: 50px;
     background: #10252e;
-    color: white;
-    position: fixed; 
-    left: 0; bottom: 0;
     padding: 10px;
-    color: #fff;
-    width: 100%; 
     color: white;
-   font-weight: bold;
-   font-size: 12pt;
+    font-weight: bold;
+    font-size: 12pt;
 }
 .news{
     padding: 10px 20px 10px 20px;
