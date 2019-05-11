@@ -9,7 +9,7 @@
 </head>
 <body>
 	<!-- Контактная информация -->
-	<div class="container-fluid" style="background-color: white;">
+	<div class="container-fluid" style="background-color: #10252e;">
 		<div class="row">
 			<div class="col-md-9">
 				<div class="header_info">
@@ -25,8 +25,21 @@
 	</div>
 	<!-- Лого -->
 	<div class="container-fluid" style="margin-top: 10px;">
-		<div class="logo">
-		<img class="logo_image" src="../../public/images/logo_green.png">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="logo">
+					<img class="logo_image" src="../../public/images/logo_green.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="logo2">
+					<p>
+						<center>САЙТ</center>
+						<center>ДОПОЛНИТЕЛЬНОГО</center>
+						<center>ОБРАЗОВАНИЯ</center>
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- Меню -->
