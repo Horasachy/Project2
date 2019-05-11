@@ -1,11 +1,6 @@
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md">
-					<footer>
-						Информация
-					</footer>		
-				</div>
-			</div>
+			<div class="footer">
+					Информация
+			</div>	
 		</div>
 	</body>
 </html>

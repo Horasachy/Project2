@@ -9,7 +9,7 @@ class IndexController {
 	//Вывод новостей
 	public function actionIndex()
 	{
-		$this->pageData['title'] = "Новости";
+		$this->page['title'] = "Главная";
 		$newsList = array();
 		$newsList = News::getNewsList();
 		
@@ -23,8 +23,8 @@ class IndexController {
 		
 		if ($id) {
 			$newsItem = News::getNewsItemByID($id);
-			$this->pageData['title'] = $newsItem['title'];
-			require_once(ROOT . '/views/news/view.php');
+			$this->page['title'] = $newsItem['title'];
+			require_once(ROOT . '/views/main/news.php');
 
 		}
 		

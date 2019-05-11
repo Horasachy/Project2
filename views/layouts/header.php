@@ -16,13 +16,13 @@
 					<p><i class="fa fa-phone" aria-hidden="true"></i> 123-123-123
 						|| 
 						<i class="fa fa-envelope" aria-hidden="true"></i> bask-email.ru</p>
-					</div>
-				</div>
-				<div class="col-3">
-					<p class="header_admin">КНОПКА ПАТОМ</p>
 				</div>
 			</div>
+			<div class="col-3">
+				<p class="header_admin">КНОПКА ПАТОМ</p>
+			</div>
 		</div>
+	</div>
 		<!-- Лого -->
 		<div class="container-fluid" style="margin-top: 10px;">
 			<div class="row">
@@ -87,7 +87,6 @@
 				<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Найти</button>
 			</form>
 		</nav>
-
 		<!-- Конец меню -->
 
 

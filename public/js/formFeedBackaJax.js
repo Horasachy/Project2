@@ -5,15 +5,15 @@ $(document).ready(function(){
 		var message = $("#message").val().trim();
 
 		if (email == "") {
-			$("#error").text("Введите Email");
+			$("#error").text("Введите Email!");
 			return false;
 		}
 		else if (name == "") {
-			$("#error").text("Введите Имя");
+			$("#error").text("Введите Имя!");
 			return false;
 		}
 		else if (message.lenght < 5) {
-			$("#error").text("Введите сообщение");
+			$("#error").text("Сообщение не должно быть меньше 5 символов!");
 			return false;
 		}
 

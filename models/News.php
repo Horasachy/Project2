@@ -31,7 +31,7 @@ class News
 		$db = Db::getConnection();
 		$newsList = array();
 
-		$result = $db->query('SELECT id, title, date, author_name, short_content FROM news ORDER BY id ASC LIMIT 10');
+		$result = $db->query('SELECT id, title, date, author_name, short_content FROM news ORDER BY id DESC LIMIT 5');
 
 		$i = 0;
 		while($row = $result->fetch()) {
