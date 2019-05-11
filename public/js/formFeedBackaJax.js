@@ -20,7 +20,7 @@ $(document).ready(function(){
 		$("error").text("");
 
 		$.ajax({
-			url:'feedback/feedBack',
+			url:'/feedback',
 			type: 'POST',
 			cache: false,
 			data: {'email': email, 'name': name, 'message': message},

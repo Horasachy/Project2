@@ -1,4 +1,4 @@
-		<div class="container-fluid" style="width: 100%" >
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md">
 					<footer>

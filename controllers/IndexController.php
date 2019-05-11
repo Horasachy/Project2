@@ -5,6 +5,8 @@ include_once ROOT. '/models/News.php';
 
 class IndexController {
 	public $pageData = array();
+
+	//Вывод новостей
 	public function actionIndex()
 	{
 		$this->pageData['title'] = "Новости";
@@ -15,6 +17,7 @@ class IndexController {
 		return true;
 	}
 
+	//Вывод одной новости(отдельная страница)
 	public function actionView($id)
 	{
 		
@@ -26,6 +29,18 @@ class IndexController {
 		}
 		
 		return true;
+
+	}
+
+	//Обратная связь, данные из formFeedBackaJax.js
+	public function actionFeedBack(){
+		$email   = $_POST['email'];
+		$name    = $_POST['name'];
+		$message = $_POST['message'];
+
+		$subject = "=?utf-8?B?".base64_encode("Сообщение с сайта")."?=";
+		$headers = "From: $name\r\nReply-to: $email\r\nContent-type: text/html; charset=utf-8\r\n";
+		$success = mail("misha89891@mail.ru", $subject, $message, $headers);
 
 	}
 
