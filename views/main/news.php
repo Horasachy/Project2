@@ -18,17 +18,17 @@
 		<!--правые блоки-->
 		<div class="col-md-3">
 			<aside>
-				<h4>
+				<h4 class="h4-b">
 					Архив новостей
 				</h4>
 			</aside>
 			<aside>
-				<h4>
+				<h4 class="h4-b">
 					Партнеры
 				</h4>
 			</aside>
 			<aside>
-				<h4>
+				<h4 class="h4-b">
 					Фотоальбом
 				</h4>
 			</aside>

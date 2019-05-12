@@ -9,6 +9,7 @@ error_reporting(E_ALL);
 define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 require_once(ROOT.'/components/Router.php');
 require_once(ROOT.'/components/Db.php');
+require_once(ROOT.'/components/Autoload.php');
 
 // 3. Установка соединения с БД
 

@@ -4,24 +4,30 @@
 	
 	<div class="row">
 		<div class="col-lg-9">
-			<?php foreach ($newsList as $newsItem):?>
-
+			<?php foreach ($data as $row):?>
 				<article>
-					<h2><a class="news-link" href="news/<?=$newsItem['id'];?>"><?= $newsItem['title'];?></a></h2>
+					<h2><a class="news-link" href="news/<?=$newsItem['id'];?>"><?= $row['title'];?></a></h2>
 					<div class="author">
 						<ul>
-							<li><i class="fa fa-user" aria-hidden="true"></i> <?= $newsItem['author_name'];?></li>
-							<li style="margin-left: 10px;"><i class="fa fa-calendar" aria-hidden="true"></i> <?= $newsItem['date'];?></li>
+							<li><i class="fa fa-user" aria-hidden="true"></i> <?= $row['author_name'];?></li>
+							<li style="margin-left: 10px;"><i class="fa fa-calendar" aria-hidden="true"></i> <?= $row['date'];?></li>
 						</ul>	
 					</div>
 					<p>
-						<?=$newsItem['short_content']?>
+						<?=$row['short_content']?>
 					</p>
 					<div>
-						<a id="news-link" href="news/<?= $newsItem['id'];?>">Читать далее</a>
+						<a id="news-link" href="/news/<?= $row['id'];?>">Читать далее</a>
 					</div>
+					
 				</article>
 			<?php endforeach;?>
+
+			<!-- Пагинация -->
+			<?for ($i = 1; $i <= $pagesCount; $i++):?>
+			<?echo "<a class ='a-pag' href='/news/?page=$i'>$i</a>";?>
+			<?endfor;?>
+
 		</div>
 
 		<!--правые блоки-->
