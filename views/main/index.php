@@ -22,14 +22,7 @@
 					
 				</article>
 			<?php endforeach;?>
-
-			<!-- Пагинация -->
-			<?for ($i = 1; $i <= $pagesCount; $i++):?>
-			<?echo "<a class ='a-pag' href='/news/?page=$i'>$i</a>";?>
-			<?endfor;?>
-
 		</div>
-
 		<!--правые блоки-->
 		<div class="col-md-3">
 			<aside>
@@ -49,6 +42,19 @@
 			</aside>
 		</div>
 		<!--/правые блоки-->
+
+			<!-- Пагинация -->
+		<div class="container" style="margin-top: 20px;">
+			<div class="row">
+				<div class="col-md-9">
+					<?for ($i = 1; $i <= $pagesCount; $i++):?>
+					<?echo "<a class ='a-pag' href='/news/?page=$i'>$i</a>";?>
+					<?endfor;?>	
+				</div>
+			</div>
+		</div>
+		<!--/Пагинация -->
+
 	</div>
 	<!--Обратная связь-->
 	<div class="row">

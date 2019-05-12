@@ -36,6 +36,7 @@ article{
     border-bottom: solid #079a80 2px;
 }
 .footer{
+    bottom: 0;
     margin-top: 50px;
     display: block;
     height: 50px;
@@ -107,12 +108,15 @@ article{
     opacity: 1;
 }
 .a-pag{
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     left: 150px;
     text-decoration: none;
     color: white;
     background: #109c83;
     line-height: 44px;
-    padding: 10px 16px 10px 16px;
+    padding: 4px 8px 4px 8px;
     font-weight: bold;
     transition: .7s;
 }
@@ -123,7 +127,7 @@ article{
    border: 2px solid #109c83;
    line-height: 44px;
    transition: .7s;
-   padding: 10px 16px 10px 16px;
+   padding: 2px 5px 2px 5px;
    font-weight: bold; 
    opacity: 1;
 }

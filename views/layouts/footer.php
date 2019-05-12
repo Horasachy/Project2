@@ -1,6 +1,6 @@
 			<div class="footer">
 					Информация
-			</div>	
+			</div>
 		</div>
 	</body>
 </html>
