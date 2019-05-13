@@ -12,7 +12,7 @@ class IndexController {
 		else{
 			$page = 1;
 		}
-		$notesOnPage = 1;
+		$notesOnPage = 3;
 		$from = ($page - 1) * $notesOnPage;
 		
 		$sql = "SELECT * FROM news WHERE id > 0 LIMIT :from, :notesOnPage";
