@@ -1,7 +1,6 @@
-
-			<div class="footer">
-					Информация
-			</div>
+		<div class="footer">
+			Информация
 		</div>
-	</body>
+	</div>
+</body>
 </html>

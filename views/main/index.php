@@ -4,24 +4,67 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-9">
-				<?php foreach ($data as $row):?>
+				<?for($i = 0; $i < $num; $i++):?> 
 					<article>
-						<h2><a class="news-link" href="news/<?=$row['id'];?>"><?= $row['title'];?></a></h2>
+						<h2><a class="news-link" href="news/<?=$postrow[$i]['id'];?>"><?=$postrow[$i]['title']?></a></h2>
 						<div class="author">
 							<ul>
-								<li><i class="fa fa-user" aria-hidden="true"></i> <?= $row['author_name'];?></li>
-								<li style="margin-left: 10px;"><i class="fa fa-calendar" aria-hidden="true"></i> <?= $row['date'];?></li>
+								<li><i class="fa fa-user" aria-hidden="true"></i> <?= $postrow[$i]['author_name'];?></li>
+								<li style="margin-left: 10px;"><i class="fa fa-calendar" aria-hidden="true"></i> <?= $postrow[$i]['date'];?></li>
 							</ul>	
 						</div>
 						<p>
-							<?=$row['short_content']?>
+							<?=$postrow[$i]['short_content']?>
 						</p>
 						<div>
-							<a id="news-link" href="/news/<?= $row['id'];?>">Читать далее</a>
+							<a id="news-link" href="/news/<?= $postrow[$i]['id'];?>">Читать далее</a>
 						</div>
 						
 					</article>
-				<?php endforeach;?>
+					<?endfor;?>
+							<!-- Пагинация -->
+			<div class="container" style="margin-top: 20px;">
+				<div class="row">
+					<div class="col-md-9">	
+						<? if ($page != 1):?> 
+						<?$pervpage = '<a href= ./news/page=1><<</a><a href= ./news?page='. ($page - 1) .'><</a>';?> 
+						<?endif?>
+
+						<?if ($page != $total):?> 
+						<?$nextpage = ' <a href= ./news?page='. ($page + 1) .'>></a><a href= ./news?page=' .$total. '>>></a>';?> 
+						<?endif?>
+
+						<?if($page - 2 > 0) $page2left = ' <a href= ./news?page='. ($page - 2) .'>'. ($page - 2) .'</a> | '; ?>
+						<?if($page - 1 > 0) $page1left = ' <a href= ./news?page='. ($page - 1) .'>'. ($page - 1) .'</a> | '; ?>
+						<?if($page + 2 <= $total) $page2right = ' | <a href= ./news?page='. ($page + 2) .'>'. ($page + 2) .'</a>'; ?>
+						<?if($page + 1 <= $total) $page1right = ' | <a href= ./news?page='. ($page + 1) .'>'. ($page + 1) .'</a>'; ?>
+
+						<?if (isset($pervpage)):?>
+						<?=$pervpage?>
+						<?endif?>
+						<?if (isset($page2left)):?>
+						<?=$page2left?>
+						<?endif?>
+						<?if (isset($page1left)):?>
+						<?=$page1left?>
+						<?endif?>
+						<?if (isset($page)):?>
+						<?=$page?>
+						<?endif?>
+						<?if (isset($page1right)):?>
+						<?=$page1right?>
+						<?endif?>
+						<?if (isset($page2right)):?>
+						<?=$page2right?>
+						<?endif?>
+						<?if (isset($nextpage)):?>
+						<?=$nextpage?>
+						<?endif?>
+					</div>
+				</div>
+			</div>
+			<!--/Пагинация -->
+
 			</div>
 			<!--правые блоки-->
 			<div class="col-md-3">
@@ -42,19 +85,6 @@
 				</aside>
 			</div>
 			<!--/правые блоки-->
-
-				<!-- Пагинация -->
-			<div class="container" style="margin-top: 20px;">
-				<div class="row">
-					<div class="col-md-9">
-						<?for ($i = 1; $i <= $pagesCount; $i++):?>
-						<?echo "<a class ='a-pag' href='/news/?page=$i'>$i</a>";?>
-						<?endfor;?>	
-					</div>
-				</div>
-			</div>
-			<!--/Пагинация -->
-
 		</div>
 		<!--Обратная связь-->
 		<div class="row">
