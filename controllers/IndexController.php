@@ -6,34 +6,37 @@ class IndexController {
 	public function actionIndex()
 	{
 		$db = Db::getConnection();
-		$num = 3;
-		$page = $_GET['page'];
-
+		$num = 2;
+		if(!empty($_GET['page'])){
+			$page = $_GET['page'];
+		}
+		else{
+			$page = 1;
+		}
 
 		$sql ="SELECT COUNT(*) FROM news";
 		$stmt= $db->query($sql); 
-		$posts = $stmt->fetch(PDO::FETCH_ASSOC);
+		$posts = $stmt->fetch(PDO::FETCH_NUM);
 		foreach ($posts as $post) {
 			$posts = $post;
 		}
 		$total = intval(($posts - 1) / $num) + 1;
-		
 		$page = intval($page); 
-		if(empty($page) or $page < 0) {
+		if(empty($page) || $page < 0) {
 			$page = 1;
 			} 
 		  if($page > $total){
 		   $page = $total; 
 		}
-
 		$start = $page * $num - $num; 
+
 		$sql = "SELECT * FROM news LIMIT :start, :num";
 		$stmt=$db->prepare($sql);
 		$stmt->bindParam(':start', $start, PDO::PARAM_INT);
 		$stmt->bindParam(':num', $num, PDO::PARAM_INT);
 		$stmt->execute();
-		while ($postrow[] = $stmt->fetch(PDO::FETCH_ASSOC));
-
+	 	$postrow = array();
+		while ($postrow[] = $stmt->fetch(PDO::FETCH_BOTH));
 		$this->page['title'] = "Главная";
 		require_once(ROOT . '/views/main/index.php');
 		return true;
