@@ -14,9 +14,8 @@ class IndexController {
 			$page = 1;
 		}
 
-		$sql ="SELECT COUNT(*) FROM news";
-		$stmt= $db->query($sql); 
-		$posts = $stmt->fetch(PDO::FETCH_NUM);
+		$posts = News::countNews();
+
 		foreach ($posts as $post) {
 			$posts = $post;
 		}
@@ -28,15 +27,12 @@ class IndexController {
 		  if($page > $total){
 		   $page = $total; 
 		}
-		$start = $page * $num - $num; 
+		$start = $page * $num - $num;
 
-		$sql = "SELECT * FROM news LIMIT :start, :num";
-		$stmt=$db->prepare($sql);
-		$stmt->bindParam(':start', $start, PDO::PARAM_INT);
-		$stmt->bindParam(':num', $num, PDO::PARAM_INT);
-		$stmt->execute();
-	 	$postrow = array();
-		while ($postrow[] = $stmt->fetch(PDO::FETCH_BOTH));
+		$postrow = array();
+		$postrow = News::paginationNews($start, $num);
+		
+
 		$this->page['title'] = "Главная";
 		require_once(ROOT . '/views/main/index.php');
 		return true;
@@ -122,5 +118,4 @@ class IndexController {
 
 // // Вывод меню 
 // echo $pervpage.$page2left.$page1left.'<b>'.$page.'</b>'.$page1right.$page2right.$nextpage; 
- 
-// ?>
+?>

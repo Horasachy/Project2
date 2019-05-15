@@ -19,7 +19,6 @@ class PaginationController{
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		for($data = []; $row; $data[] = $row);
 		var_dump($data);	
-	
 	}
 }
 
