@@ -5,8 +5,7 @@ class IndexController {
 	//Вывод новостей с пагинацией(под рефакторинг);
 	public function actionIndex()
 	{
-		$db = Db::getConnection();
-		$num = 2;
+		$num = 3;
 		if(!empty($_GET['page'])){
 			$page = $_GET['page'];
 		}
