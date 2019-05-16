@@ -9,7 +9,7 @@
 					<h2><?php echo $newsItem['title'];?></h2>
 					<div class="author">
 						<ul>
-							<li><i class="fa fa-user" aria-hidden="true"></i> 	  <?echo $newsItem['author_name'];?></li>
+							<li><i class="fa fa-user" aria-hidden="true"></i> <?echo $newsItem['author_name'];?></li>
 							<li style="margin-left: 10px;"><i class="fa fa-calendar" aria-hidden="true"></i> <?echo $newsItem['date'];?></li>
 						</ul>	
 					</div>
@@ -19,11 +19,6 @@
 
 			<!--правые блоки-->
 			<div class="col-md-3">
-				<aside>
-					<h4 class="h4-b">
-						Архив новостей
-					</h4>
-				</aside>
 				<aside>
 					<h4 class="h4-b">
 						Партнеры

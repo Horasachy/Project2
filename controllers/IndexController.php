@@ -31,7 +31,6 @@ class IndexController {
 		$postrow = array();
 		$postrow = News::paginationNews($start, $num);
 		
-
 		$this->page['title'] = "Главная";
 		require_once(ROOT . '/views/main/index.php');
 		return true;

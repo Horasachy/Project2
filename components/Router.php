@@ -54,11 +54,7 @@ class Router
 				if ($result != null) {
 					break;
 				}
-				else{
-					echo "404";
-				}
 			}
-
 		}
 	}
 }
