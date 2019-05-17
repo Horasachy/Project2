@@ -31,10 +31,8 @@ article{
     margin-top: 30px;
     border-radius: 3px;
 }
-.form form {
-  width: 300px;
-  margin: 0 auto;
-  padding-top: 20px;
+header{
+    position: relative;
 }
 ::-webkit-scrollbar{
     width:12px;
@@ -55,6 +53,10 @@ article{
 ::-webkit-scrollbar-track:hover{
     border-left: solid 1px #aaa;
     background-color: #eee;
+}
+.success{
+    color: #28a745;
+    margin-top: 5px;
 }
 .errors{
     color: #bb2e2e;
@@ -83,6 +85,79 @@ article{
     transition: .7s;
 }
 .submit_login:hover{
+    padding: 5px 18px 5px 18px;
+    text-decoration: none;
+    color: #109c83;
+    background: white;
+    border: 2px solid #109c83;
+    transition: .7s;
+    font-weight: bold; 
+    opacity: 1;
+}
+
+.submit_exit{
+    padding: 2px 16px 2px 16px;
+    text-decoration: none;
+    color: #109c83;
+    background: #10252e;
+    border-radius: 3px;
+    border: solid #109c83;
+    font-weight: bold;
+    transition: .7s;
+}
+.submit_exit:hover{
+    padding: 3px 17px 3px 17px;
+    text-decoration: none;
+    color: white;
+    background: #109c83;
+    border: 2px solid #109c83;
+    transition: .7s;
+    font-weight: bold; 
+    opacity: 1;
+}
+.h_ul li{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+.h_ul{
+    margin-left: 30px;
+}
+.submit_account{
+    padding: 6px 11px 6px 11px;
+    text-decoration: none;
+    color: #109c83;
+    background: #10252e;
+    border-radius: 3px;
+    border: solid #109c83;
+    font-weight: bold;
+    transition: .7s;
+}
+.submit_account:hover{
+    padding: 6px 12px 6px 12px;
+    text-decoration: none;
+    color: white;
+    background: #109c83;
+    border: 2px solid #109c83;
+    transition: .7s;
+    font-weight: bold; 
+    opacity: 1;
+}
+
+.submit_update{
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 3px 16px 3px 16px;
+    text-decoration: none;
+    color: white;
+    background: #109c83;
+    border-radius: 3px;
+    border: solid #109c83;
+    font-weight: bold;
+    transition: .7s;
+}
+.submit_update:hover{
     padding: 5px 18px 5px 18px;
     text-decoration: none;
     color: #109c83;
@@ -198,11 +273,6 @@ article{
    font-weight: bold;
    font-size: 12pt;
 }
-.header_admin{
-   margin-top: 10px;
-   margin-left: 130px;
-   color: white;
-}
 .logo2{
     color: black;
     font-weight: bold;
@@ -264,5 +334,10 @@ article{
 @media (max-width: 993px) { 
     .feedback{
         margin-top: 50px;
+    }
+}
+@media (max-width: 960px) { 
+   .h_ul{
+        margin-left: -60px;
     }
 }

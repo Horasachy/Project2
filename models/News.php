@@ -1,17 +1,22 @@
 <?php
-class News
-{
+class News{
+	
+	//вывод одной новости
 	public static function getNewsItemByID($id){
 		$id 		  = intval($id);
 		if ($id) {
 			$db       = Db::getConnection();
-			$result   = $db->query('SELECT * FROM news WHERE id=' . $id);
+			$result   = $db->query('SELECT * FROM news 
+												  WHERE 
+												  id=' .$id
+								  );
 			$result->setFetchMode(PDO::FETCH_ASSOC);
 			$newsItem = $result->fetch();
 			return $newsItem;
 		}
 	}
 
+	//подсчетновостей
 	public static function countNews(){
 		$db    = Db::getConnection();
 		$sql   = "SELECT COUNT(*) FROM news";
@@ -20,6 +25,7 @@ class News
 		return $posts;
 	}
 
+	//вывод новостей с пагинацией
 	public static function paginationNews($start, $num){
 		$db      = Db::getConnection();
 		$postrow = array();

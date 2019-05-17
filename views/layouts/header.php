@@ -9,9 +9,10 @@
 </head>
 <body>
 	<!-- Контактная информация -->
+<header>
 	<div class="container-fluid" style="background-color: #10252e;">
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-9">
 				<div class="header_info">
 					<p><i class="fa fa-phone" aria-hidden="true"></i> 123-123-123
 						|| 
@@ -19,7 +20,14 @@
 				</div>
 			</div>
 			<div class="col-3">
-				<p class="header_admin">КНОПКА ПАТОМ</p>
+				<?if(!empty($_SESSION['admin'])):?>
+				<form method="POST" action="">
+					<ul class="h_ul">
+						<li><a class="submit_account" href="/myaccount">Аккаунт</a></li>
+						<li><input class="submit_exit" type="submit" name="exit" value="Выйти"></li>
+					</ul>
+				</form>
+				<?endif;?>
 			</div>
 		</div>
 	</div>
@@ -87,4 +95,5 @@
 				<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Найти</button>
 			</form>
 		</nav>
+</header>		
 		<!-- Конец меню -->

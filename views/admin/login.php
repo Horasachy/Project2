@@ -12,13 +12,13 @@
 		<form class="login" method="POST" action="">
 			<h4 class="h4-b">Вход в систему</h4><br>
 			<label class="label_login">Логин:</label><br>
-			<input type="text" name="login"><br><br>
+			<input type="text" name="login" value="<?=$_POST['login'];?>"><br><br>
 
 			<label class="label_login">Пароль:</label><br>
 			<input type="password" name="password"><br>
 
 			<input class="submit_login" type="submit" name="submit" value="Войти">
-			<?if(!empty($page['errors'])):?>
+			<?if(!empty($this->page['errors'])):?>
 					<div class="errors">
 						<?=$this->page['errors'];?>
 					</div>	
