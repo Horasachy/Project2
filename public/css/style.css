@@ -157,6 +157,9 @@ header{
     font-weight: bold;
     transition: .7s;
 }
+.GMAP{
+    margin-top: 30px;
+}
 .submit_update:hover{
     padding: 5px 18px 5px 18px;
     text-decoration: none;
