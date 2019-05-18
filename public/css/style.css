@@ -285,6 +285,26 @@ header{
     font-weight: bold; 
     opacity: 1;
 }
+.removeNews{
+    padding: 2px 16px 2px 16px;
+    text-decoration: none;
+    color: #d54747;
+    background: white;
+    border-radius: 3px;
+    border: solid #d54747;
+    font-weight: bold;
+    transition: .7s;
+}
+.removeNews:hover{
+    padding: 3px 17px 3px 17px;
+    text-decoration: none;
+    color: white;
+    background: #d54747;
+    border: 2px solid #d54747;
+    transition: .7s;
+    font-weight: bold; 
+    opacity: 1;
+}
 .a-pag{
     margin-top: 10px;
     margin-left: 5px;
