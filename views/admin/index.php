@@ -47,17 +47,17 @@
 					<div class="row">
 						<div class="col-md-9">	
 							<? if ($page != 1):?> 
-								<?$pervpage = '<a href= /news?page=1><< </a><a href= /news?page='. ($page - 1) .'><</a>';?> 
+								<?$pervpage = '<a href= /adminNews?page=1><< </a><a href= /adminNews?page='. ($page - 1) .'><</a>';?> 
 								<?endif?>
 
 								<?if ($page != $total):?> 
-								<?$nextpage = ' <a href= /news?page='. ($page + 1) .'>></a><a href= /news?page=' .$total. '> >></a>';?> 
+								<?$nextpage = ' <a href= /adminNews?page='. ($page + 1) .'>></a><a href= /adminNews?page=' .$total. '> >></a>';?> 
 								<?endif?>
 
-								<?if($page - 2 > 0) $page2left = ' <a href= ./news?page='. ($page - 2) .'>'. ($page - 2) .'</a> | '; ?>
-								<?if($page - 1 > 0) $page1left = ' <a href= ./news?page='. ($page - 1) .'>'. ($page - 1) .'</a> | '; ?>
-								<?if($page + 2 <= $total) $page2right = ' | <a href= ./news?page='. ($page + 2) .'>'. ($page + 2) .'</a>'; ?>
-								<?if($page + 1 <= $total) $page1right = ' | <a href= ./news?page='. ($page + 1) .'>'. ($page + 1) .'</a>'; ?>
+								<?if($page - 2 > 0) $page2left = ' <a href= ./adminNews?page='. ($page - 2) .'>'. ($page - 2) .'</a> | '; ?>
+								<?if($page - 1 > 0) $page1left = ' <a href= ./adminNews?page='. ($page - 1) .'>'. ($page - 1) .'</a> | '; ?>
+								<?if($page + 2 <= $total) $page2right = ' | <a href= ./adminNews?page='. ($page + 2) .'>'. ($page + 2) .'</a>'; ?>
+								<?if($page + 1 <= $total) $page1right = ' | <a href= ./adminNews?page='. ($page + 1) .'>'. ($page + 1) .'</a>'; ?>
 
 								<?if (isset($pervpage)):?>
 								<?=$pervpage?>
