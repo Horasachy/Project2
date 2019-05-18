@@ -51,26 +51,19 @@ class AdminNewsController {
 	}
 	//добавление новости
 	public static function addNews(){
-		if(!empty($_POST['addNews'])){
-			$submit   = $_POST['addNews'];
-		}
-		if(!empty($_POST['title'])){
-			$phone    = $_POST['title'];
-		}
-		if(!empty($_POST['short_content'])){
-			$email    = $_POST['short_content'];
-		}
-		if(!empty($_POST['content'])){
-			$email    = $_POST['content'];
-		}
-		if(!empty($_POST['email'])){
-			$email    = $_POST['author_name'];
+		if(!empty($_POST)){
+			$submit   		= $_POST['addNews'];
+			$title    		= $_POST['title'];
+			$short_content  = $_POST['short_content'];
+			$content    	= $_POST['content'];
+			$author_name    = $_POST['author_name'];
 		}
 		if (isset($submit)) {
 			if(AdminNews::addNews($title, $short_content, $content, $author_name)){
 				header("Location:/adminNews");
 			}
 		}
+		return true;
 
 	}
 	//Удаление новости
@@ -84,7 +77,7 @@ class AdminNewsController {
 				header("Location:/adminNews");
 			}
 		}
-
+		return true;
 	}
 	//Вывод одной новости(отдельная страница)
 	public function actionView($id){
@@ -99,13 +92,9 @@ class AdminNewsController {
 	}
 	//Апдейт контактной информации
 	public static function UpdateContactInfo(){
-		if(!empty($_POST['headerInfo'])){
+		if(!empty($_POST)){
 			$submit   = $_POST['headerInfo'];
-		}
-		if(!empty($_POST['phone'])){
 			$phone    = $_POST['phone'];
-		}
-		if(!empty($_POST['email'])){
 			$email    = $_POST['email'];
 		}
 		if (isset($submit)){
@@ -118,7 +107,7 @@ class AdminNewsController {
 				header("Location:/adminNews");
 			}
 		}
-	return true;
+		return true;
 	}
 }
 ?>
