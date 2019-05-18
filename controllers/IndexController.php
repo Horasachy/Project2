@@ -1,6 +1,6 @@
 <?php
 class IndexController {
-	//Вывод новостей с пагинацией;
+		//Вывод новостей с пагинацией;
 	public function actionIndex(){	
 		//Сколько страниц выводим
 		$num = 3;
@@ -40,7 +40,6 @@ class IndexController {
 			Session::logout();
 		}
 
-		
 		//render
 		$row = AdminHeader::headerInfo();
 		$this->page['title'] = "Главная";
