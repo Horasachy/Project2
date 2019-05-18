@@ -14,12 +14,12 @@
 		<div class="row">
 			<div class="col-9">
 				<ul class="header_info">
-					<li><i class="fa fa-phone" aria-hidden="true"></i> 123-123-123</li>
-					<li><i class="fa fa-envelope" aria-hidden="true"></i> bask-email.ru</p></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> <?=$row['phone'];?></li>
+					<li><i class="fa fa-envelope" aria-hidden="true"></i> <?=$row['email'];?></p></li>
 					<?if(!empty($_SESSION['admin'])):?>
 						<form method="POST" action="">
 							<li><input type="text" name="phone" placeholder="Телефон:"></li>
-							<li><input type="text" name="email" placeholder="Email:"></li>
+							<li><input type="email" name="email" placeholder="Email:"></li>
 							<li><input class="submit_headerInfo" type="submit" name="headerInfo" value="Редактировать"></li>
 						</form>
 					<?endif;?>

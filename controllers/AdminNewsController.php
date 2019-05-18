@@ -40,6 +40,24 @@ class AdminNewsController {
 		if (isset($_POST['exit'])) {
 			Session::logout();
 		}
+
+		//Апдейт контактной информации
+		if(!empty($_POST)){
+			$submit   = $_POST['headerInfo'];
+			$phone    = $_POST['phone'];
+			$email    = $_POST['email'];
+		}
+		if (isset($submit)){
+			if (!empty($phone)){
+				AdminHeader::updatePhone($phone);
+				header("Location:/adminNews");
+			}
+			if (!empty($email)){
+				AdminHeader::updateEmail($email);
+				header("Location:/adminNews");
+			}
+		}
+
 		//render
 		$row = AdminHeader::headerInfo();
 		$this->page['title'] = "Главная";
