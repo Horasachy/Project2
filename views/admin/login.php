@@ -12,7 +12,7 @@
 		<form class="login" method="POST" action="">
 			<h4 class="h4-b">Вход в систему</h4><br>
 			<label class="label_login">Логин:</label><br>
-			<input type="text" name="login" value="<?=$_POST['login'];?>"><br><br>
+			<input type="text" name="login" value="<?if(!empty($_POST['login'])){echo $_POST['login'];}?>"><br><br>
 
 			<label class="label_login">Пароль:</label><br>
 			<input type="password" name="password"><br>

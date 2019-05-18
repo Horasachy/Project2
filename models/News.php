@@ -1,6 +1,5 @@
 <?php
 class News{
-	
 	//вывод одной новости
 	public static function getNewsItemByID($id){
 		$id 		  = intval($id);

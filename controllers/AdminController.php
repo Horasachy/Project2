@@ -19,8 +19,7 @@ class AdminController{
 				$row = Admin::getId($login, $password);
 				$id = $row['id_user'];
 				$_SESSION['admin'] = $id;
-				$session = $_SESSION['admin'];
-				header('Location:/');				
+				header('Location:/adminNews');				
 			}
 			else{
 				$this->page['errors'] = "Неверный логин или пароль!";

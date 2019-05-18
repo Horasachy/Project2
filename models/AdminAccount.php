@@ -6,10 +6,10 @@ class AdminAccount{
 	$salt  = '}32%JaQjFATWeld%Qo@1';
     $password = crypt($password, $salt);
 	$sql  = "SELECT login FROM 
-					  users 
-					  WHERE
-					  password = ?
-					  ";
+					      users 
+					      WHERE
+					      password = ?
+					      ";
 	$stmt = $db->prepare($sql);
 	$stmt->bindParam(1, $password, PDO::PARAM_STR);
 	$stmt->execute();				  
@@ -56,7 +56,7 @@ class AdminAccount{
 		return $stmt->execute();
     }
 
-	public static function checkPasswordNew($passwordNew){
+	 public static function checkPasswordNew($passwordNew){
 		$db   = Db::getConnection();
 		$sql  = "SELECT login FROM 
 						  users 

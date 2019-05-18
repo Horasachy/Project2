@@ -1,7 +1,8 @@
 <?php
-class IndexController {
+class AdminNewsController {
 	//Вывод новостей с пагинацией;
 	public function actionIndex(){	
+		Session::sessionExists();
 		//Сколько страниц выводим
 		$num = 3;
 		if(!empty($_GET['page'])){
@@ -39,24 +40,20 @@ class IndexController {
 		if (isset($_POST['exit'])) {
 			Session::logout();
 		}
-
-		
 		//render
 		$row = AdminHeader::headerInfo();
 		$this->page['title'] = "Главная";
-		require_once(ROOT . '/views/main/index.php');
+		require_once(ROOT . '/views/admin/index.php');
 		return true;
 	}
 
 	//Вывод одной новости(отдельная страница)
-	public function actionView($id)
-	{
+	public function actionView($id){
 		if ($id) {
 			$newsItem = News::getNewsItemByID($id);
-
 			$row = AdminHeader::headerInfo();
 			$this->page['title'] = $newsItem['title'];
-			require_once(ROOT . '/views/main/news.php');
+			require_once(ROOT . '/views/admin/news.php');
 		}
 		return true;
 
