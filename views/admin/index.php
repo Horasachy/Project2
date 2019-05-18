@@ -4,6 +4,21 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-9">
+				<?if(!empty($_SESSION['admin'])):?>
+				<div class="row">
+					<div class="col-md-9">
+						<form id="AddNewsForm" method="POST" action="">
+							<h4 style="margin-bottom: 20px;">Добавление новости</h4>
+							<input type="text" name="title" placeholder="Заголовок:" class="form-control"><br>
+							<input type="text" name="author_name" placeholder="Кто опубликовал:" class="form-control"><br>
+							<textarea name="short_content" placeholder="Короткая новость:" class="form-control"></textarea><br>
+							<textarea name="content" placeholder="Полная новость:" class="form-control"></textarea><br>
+							<input class="addNews" type="submit" name="addNews" value="Опубликовать">
+							<div class="errors"></div>
+						</form>
+					</div>
+				</div>
+				<?endif;?>
 				<?foreach($postrow as $row):?> 
 				<article>
 					<h2><a class="news-link" href="/adminNews/<?=$row['id'];?>"><?=$row['title']?></a></h2>
@@ -17,7 +32,13 @@
 						<?=$row['short_content']?>
 					</p>
 					<div>
-						<a id="news-link" href="/adminNews/<?= $row['id'];?>">Читать далее</a>
+						<form method="POST" action="">
+							<a id="news-link" href="/adminNews/<?= $row['id'];?>">Читать далее</a>
+							<?if(!empty($_SESSION['admin'])):?>
+							<input type="hidden" name="idNews" value="<?=$row['id'];?>">
+							<input class="removeNews" type="submit" name="removeNews" value="Удалить">
+							<?endif;?>
+						</form>
 					</div>
 				</article>
 				<?endforeach;?>
@@ -98,13 +119,13 @@
 			<!--/Обратная связь-->
 
 			<!--GoogleMaps-->
-		<div class="GMAP">
-			<div class="row">
-				<div class="col-md-8">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d771.7133859194024!2d56.03731681827097!3d54.792817616741516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d93781829852af%3A0x2729b7dd064ae968!2z0JHQsNGI0LrQuNGA0YHQutC40Lkg0LDRgNGF0LjRgtC10LrRgtGD0YDQvdC-LdGB0YLRgNC-0LjRgtC10LvRjNC90YvQuSDQutC-0LvQu9C10LTQtg!5e0!3m2!1sru!2sru!4v1558114968270!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<div class="GMAP">
+				<div class="row">
+					<div class="col-md-8">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d771.7133859194024!2d56.03731681827097!3d54.792817616741516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d93781829852af%3A0x2729b7dd064ae968!2z0JHQsNGI0LrQuNGA0YHQutC40Lkg0LDRgNGF0LjRgtC10LrRgtGD0YDQvdC-LdGB0YLRgNC-0LjRgtC10LvRjNC90YvQuSDQutC-0LvQu9C10LTQtg!5e0!3m2!1sru!2sru!4v1558114968270!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
 				</div>
 			</div>
-		</div>
 			<!--/GoogleMaps-->
 
 		</div>

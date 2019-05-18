@@ -28,7 +28,7 @@ class News{
 	public static function paginationNews($start, $num){
 		$db      = Db::getConnection();
 		$postrow = array();
-		$sql     = "SELECT * FROM news LIMIT :start, :num";
+		$sql     = "SELECT * FROM news ORDER BY id DESC LIMIT :start, :num";
 		$stmt    = $db->prepare($sql);
 		$stmt->bindParam(':start', $start, PDO::PARAM_INT);
 		$stmt->bindParam(':num',  	 $num, PDO::PARAM_INT);

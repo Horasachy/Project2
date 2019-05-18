@@ -16,14 +16,14 @@
 				<ul class="header_info">
 					<li><i class="fa fa-phone" aria-hidden="true"></i> <?=$row['phone'];?></li>
 					<li><i class="fa fa-envelope" aria-hidden="true"></i> <?=$row['email'];?></p></li>
+				</ul>
 					<?if(!empty($_SESSION['admin'])):?>
 						<form method="POST" action="">
-							<li><input type="text" name="phone" placeholder="Телефон:"></li>
-							<li><input type="email" name="email" placeholder="Email:"></li>
-							<li><input class="submit_headerInfo" type="submit" name="headerInfo" value="Редактировать"></li>
+							<input type="text" name="phone" placeholder="Телефон:">
+							<input type="email" name="email" placeholder="Email:">
+							<input class="submit_headerInfo" type="submit" name="headerInfo" value="Редактировать">
 						</form>
 					<?endif;?>
-				</ul>
 			</div>
 			<div class="col-3">
 				<?if(!empty($_SESSION['admin'])):?>

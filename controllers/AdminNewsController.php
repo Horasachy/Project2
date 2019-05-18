@@ -2,6 +2,13 @@
 class AdminNewsController {
 	//Вывод новостей с пагинацией;
 	public function actionIndex(){	
+		//Обнавление контактной информации
+		AdminNewsController::UpdateContactInfo();
+		//Добавление новости
+		AdminNewsController::addNews();
+		//Удаление новости
+		AdminNewsController::removeNews();
+		//Проверка сессии
 		Session::sessionExists();
 		//Сколько страниц выводим
 		$num = 3;
@@ -13,7 +20,6 @@ class AdminNewsController {
 		}
 		//Считаем кол-во новостей
 		$posts = News::countNews();
-
 		//Достаем значения из массива
 		foreach ($posts as $post) {
 			$posts = $post;
@@ -22,7 +28,6 @@ class AdminNewsController {
 		**intval для "округления"*/
 		$total = intval(($posts - 1) / $num) + 1;
 		$page = intval($page);
-
 		/*Если кол-во страниц $page
 		**больше кол-во страниц $total
 		**(сгенерированых страниц из подсчета 
@@ -31,23 +36,56 @@ class AdminNewsController {
 		if($page > $total){
 		   $page = $total; 
 		}
-
 		$start = $page * $num - $num;
 		$postrow = array();
 		/**откуда достаем $start и сколько достаем $num**/
 		$postrow = News::paginationNews($start, $num);
-
 		if (isset($_POST['exit'])) {
 			Session::logout();
 		}
-		AdminNewsController::UpdateContactInfo();
 		//render
 		$row = AdminHeader::headerInfo();
 		$this->page['title'] = "Главная";
 		require_once(ROOT . '/views/admin/index.php');
 		return true;
 	}
+	//добавление новости
+	public static function addNews(){
+		if(!empty($_POST['addNews'])){
+			$submit   = $_POST['addNews'];
+		}
+		if(!empty($_POST['title'])){
+			$phone    = $_POST['title'];
+		}
+		if(!empty($_POST['short_content'])){
+			$email    = $_POST['short_content'];
+		}
+		if(!empty($_POST['content'])){
+			$email    = $_POST['content'];
+		}
+		if(!empty($_POST['email'])){
+			$email    = $_POST['author_name'];
+		}
+		if (isset($submit)) {
+			if(AdminNews::addNews($title, $short_content, $content, $author_name)){
+				header("Location:/adminNews");
+			}
+		}
 
+	}
+	//Удаление новости
+	public static function removeNews(){
+		if(!empty($_POST)){
+			$submit  = $_POST['removeNews'];
+			$id   	 = $_POST['idNews'];
+		}
+		if (isset($submit)) {
+			if(AdminNews::removeNews($id)){
+				header("Location:/adminNews");
+			}
+		}
+
+	}
 	//Вывод одной новости(отдельная страница)
 	public function actionView($id){
 		if ($id) {
@@ -59,22 +97,15 @@ class AdminNewsController {
 		return true;
 
 	}
-	//Обратная связь, данные из formFeedBackaJax.js
-	public function actionFeedBack(){
-		$email   = $_POST['email'];
-		$name    = $_POST['name'];
-		$message = $_POST['message'];
-
-		$subject = "=?utf-8?B?".base64_encode("Сообщение с сайта")."?=";
-		$headers = "From: $name\r\nReply-to: $email\r\nContent-type: text/html; charset=utf-8\r\n";
-		$success = mail("misha89891@mail.ru", $subject, $message, $headers);
-	}
-
 	//Апдейт контактной информации
 	public static function UpdateContactInfo(){
-		if(!empty($_POST)){
+		if(!empty($_POST['headerInfo'])){
 			$submit   = $_POST['headerInfo'];
+		}
+		if(!empty($_POST['phone'])){
 			$phone    = $_POST['phone'];
+		}
+		if(!empty($_POST['email'])){
 			$email    = $_POST['email'];
 		}
 		if (isset($submit)){

@@ -98,10 +98,10 @@ header{
 .submit_exit{
     padding: 2px 16px 2px 16px;
     text-decoration: none;
-    color: #109c83;
+    color: #488acc;
     background: #10252e;
     border-radius: 3px;
-    border: solid #109c83;
+    border: solid #488acc;
     font-weight: bold;
     transition: .7s;
 }
@@ -109,8 +109,29 @@ header{
     padding: 3px 17px 3px 17px;
     text-decoration: none;
     color: white;
-    background: #109c83;
-    border: 2px solid #109c83;
+    background: #488acc;
+    border: 2px solid #488acc;
+    transition: .7s;
+    font-weight: bold; 
+    opacity: 1;
+}
+
+.addNews{
+    padding: 2px 16px 2px 16px;
+    text-decoration: none;
+    color: #488acc;
+    background: white;
+    border-radius: 3px;
+    border: solid #488acc;
+    font-weight: bold;
+    transition: .7s;
+}
+.addNews:hover{
+    padding: 3px 17px 3px 17px;
+    text-decoration: none;
+    color: white;
+    background: #488acc;
+    border: 2px solid #488acc;
     transition: .7s;
     font-weight: bold; 
     opacity: 1;
@@ -126,10 +147,10 @@ header{
 .submit_account{
     padding: 6px 11px 6px 11px;
     text-decoration: none;
-    color: #109c83;
+    color: #488acc;
     background: #10252e;
     border-radius: 3px;
-    border: solid #109c83;
+    border: solid #488acc;
     font-weight: bold;
     transition: .7s;
 }
@@ -137,8 +158,8 @@ header{
     padding: 6px 12px 6px 12px;
     text-decoration: none;
     color: white;
-    background: #109c83;
-    border: 2px solid #109c83;
+    background: #488acc;
+    border: 2px solid #488acc;
     transition: .7s;
     font-weight: bold; 
     opacity: 1;
@@ -146,10 +167,10 @@ header{
 .submit_headerInfo{
     padding: 6px 11px 6px 11px;
     text-decoration: none;
-    color: #109c83;
+    color: #488acc;
     background: #10252e;
     border-radius: 3px;
-    border: solid #109c83;
+    border: solid #488acc;
     font-weight: bold;
     transition: .7s;
 }
@@ -157,8 +178,8 @@ header{
     padding: 7px 12px 7px 12px;
     text-decoration: none;
     color: white;
-    background: #109c83;
-    border: 2px solid #109c83;
+    background: #488acc;
+    border: 2px solid #488acc;
     transition: .7s;
     font-weight: bold; 
     opacity: 1;
@@ -243,6 +264,7 @@ header{
     opacity: 1;
 }
 #news-link{
+   /* margin-left: 640px;*/
     text-decoration: none;
     color: white;
     background: #109c83;
@@ -297,6 +319,11 @@ header{
     font-weight: bold;
     font-size: 12pt;
     margin-bottom: -20px;
+}
+#AddNewsForm{
+    margin-top: 50px;
+    padding: 20px;
+    background: white;
 }
 .logo2{
     color: black;
