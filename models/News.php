@@ -35,6 +35,8 @@ class News{
 		$stmt->execute();
 		$i = 0;
 		while($row = $stmt->fetch(PDO::FETCH_BOTH)){
+			$postrow[$i]['mime'] =  $row['mime'];
+			$postrow[$i]['data'] =  $row['data'];
 			$postrow[$i]['title'] =  $row['title'];
 			$postrow[$i]['author_name'] = $row['author_name'];
 			$postrow[$i]['date'] = $row['date'];
