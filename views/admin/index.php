@@ -7,8 +7,9 @@
 				<?if(!empty($_SESSION['admin'])):?>
 				<div class="row">
 					<div class="col-md-9">
-						<form id="AddNewsForm" method="POST" action="">
+						<form enctype="multipart/form-data" method="POST" action="" id="AddNewsForm">
 							<h4 style="margin-bottom: 20px;">Добавление новости</h4>
+							<input type="file" name="image" class="form-control"><br>
 							<input type="text" name="title" placeholder="Заголовок:" class="form-control"><br>
 							<input type="text" name="author_name" placeholder="Кто опубликовал:" class="form-control"><br>
 							<textarea name="short_content" placeholder="Короткая новость:" class="form-control"></textarea><br>

@@ -51,6 +51,7 @@ class AdminNewsController {
 	}
 	//добавление новости
 	public static function addNews(){
+
 		if(!empty($_POST['addNews'])){
 			$submit   = $_POST['addNews'];
 		}
@@ -66,10 +67,15 @@ class AdminNewsController {
 		if(!empty($_POST['author_name'])){
 			$author_name    = $_POST['author_name'];
 		}
+		if (!empty($_FILES['image'])) {
+			$name  = $_FILES['image']['name'];
+			$type  = $_FILES['image']['type'];
+			$data = file_get_contents($_FILES['image']['tmp_name']);
+		}
+			
 		if (isset($submit)) {
-			if(AdminNews::addNews($title, $short_content, $content, $author_name)){
-				header("Location:/adminNews");
-			}
+			AdminNews::addNews($title, $short_content, $content, $author_name, $name, $type, $data);
+			header("Location:/adminNews");
 		}
 		return true;
 
