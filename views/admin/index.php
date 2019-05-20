@@ -29,7 +29,7 @@
 							<li style="margin-left: 10px;"><i class="fa fa-calendar" aria-hidden="true"></i> <?=$row['date'];?></li>
 						</ul>	
 					</div>
-					<?="<embed src='data:".$row['mime'].";base64,".base64_encode($row['data'])."' width='200'/>";?>
+					<?="<embed src='data:".$row['mime'].";base64,".base64_encode($row['data'])."' width='100%'; height='50%'/>";?>
 					<p>
 						<?=$row['short_content']?>
 					</p>
