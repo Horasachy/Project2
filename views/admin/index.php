@@ -29,7 +29,9 @@
 							<li style="margin-left: 10px;"><i class="fa fa-calendar" aria-hidden="true"></i> <?=$row['date'];?></li>
 						</ul>	
 					</div>
+					<?if(!empty($row['data']) and !empty($row['mime'])):?>
 					<?="<embed src='data:".$row['mime'].";base64,".base64_encode($row['data'])."' width='100%'; height='50%'/>";?>
+					<?endif;?>
 					<p>
 						<?=$row['short_content']?>
 					</p>

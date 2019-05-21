@@ -53,29 +53,33 @@ class AdminNewsController {
 	public static function addNews(){
 
 		if(!empty($_POST['addNews'])){
-			$submit   = $_POST['addNews'];
+			$submit        = $_POST['addNews'];
 		}
 		if(!empty($_POST['title'])){
-			$title    = $_POST['title'];
+			$title         = $_POST['title'];
 		}
 		if(!empty($_POST['short_content'])){
-			$short_content    = $_POST['short_content'];
+			$short_content = $_POST['short_content'];
 		}
 		if(!empty($_POST['content'])){
-			$content    = $_POST['content'];
+			$content   	   = $_POST['content'];
 		}
 		if(!empty($_POST['author_name'])){
-			$author_name    = $_POST['author_name'];
+			$author_name   = $_POST['author_name'];
 		}
-		if (!empty($_FILES['image'])) {
-			$name  = $_FILES['image']['name'];
+		if (!empty($_FILES['image']['name'])) {
+			$name  = $_FILES['image']['name'];			
+		}
+		if (!empty($_FILES['image']['type'])) {
 			$type  = $_FILES['image']['type'];
-			$data = file_get_contents($_FILES['image']['tmp_name']);
 		}
-			
+		if (!empty($_FILES['image']['name'])) {
+			$data  = file_get_contents($_FILES['image']['tmp_name']);
+		}	
 		if (isset($submit)) {
-			AdminNews::addNews($title, $short_content, $content, $author_name, $name, $type, $data);
-			header("Location:/adminNews");
+			if(AdminNews::addNews($title, $short_content, $content, $author_name, $name, $type, $data)){
+				header("Location:/adminNews");
+			}
 		}
 		return true;
 

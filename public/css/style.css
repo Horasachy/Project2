@@ -34,6 +34,13 @@ article{
 header{
     position: relative;
 }
+embed{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: 60%;
+    width: 100%;
+    text-align: center;
+}
 ::-webkit-scrollbar{
     width:12px;
 }
