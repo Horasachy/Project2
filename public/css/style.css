@@ -55,9 +55,9 @@ header{
     background-color: #eee;
 }
 .active{
-    color: #109c83;
     border-bottom: solid #109c83;
-
+    color: #109c83 !important;
+    
 }
 .nav-link {
     text-decoration:none;
