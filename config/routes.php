@@ -2,8 +2,9 @@
 return array(
 	//Admin
 	'adminNews/([0-9]+)' => 'adminNews/view/$1',
+	'adminAbout/([0-9]+)'=> 'adminAbout/ViewDocuments/$1', 						
 	'adminNews' 		 => 'adminNews/index/',
-	'adminAbout' 		 => 'AdminAbout/about', 
+	'adminAbout' 		 => 'adminAbout/about', 
 	'admin' 			 => 'admin/login',
 	'myaccount' 		 => 'adminAccount/account', 
 

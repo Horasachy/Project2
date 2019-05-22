@@ -11,7 +11,7 @@ body{
     color: black;
 }
 
-ul{
+li{
 	list-style: none;
 }
 
@@ -392,6 +392,18 @@ embed{
     padding: 20px;
     background: white;
 }
+#AddContactsForm{
+    padding: 20px;
+    background: white;
+}
+#AddDocumentsForm{
+    padding: 20px;
+    background: white;
+}
+#AddAccordionForm{
+    padding: 20px;
+    background: white;
+}
 .logo2{
     color: black;
     font-weight: bold;
@@ -460,7 +472,7 @@ embed{
 }
 /* стили блока аккордеон */
 .accordion {
-  width:30%;
+  width:100%;
   max-width: 600px; 
 }
 /* секции аккордеона */
