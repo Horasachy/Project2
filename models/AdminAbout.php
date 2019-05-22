@@ -76,7 +76,7 @@ class AdminAbout{
 
 public static function addAccordion($accordion_title, $accordion_content){
 		$db  = Db::getConnection();
-		//Запрос
+		//Зап$рос
 		$sql = 'INSERT INTO about_accordion(
 								accordion_title,
 								accordion_content) 
@@ -87,30 +87,31 @@ public static function addAccordion($accordion_title, $accordion_content){
 		$stmt->bindParam(2, $accordion_content, PDO::PARAM_STR);
 		return $stmt->execute();
 	}
+
+	public static function viewAccordion(){
+		$db      	  = Db::getConnection();
+		$documentsRow = array();
+		$sql     	  = "SELECT * FROM about_accordion";
+		$stmt         = $db->prepare($sql);
+		$stmt->execute();
+		$i = 0;
+		while($row = $stmt->fetch(PDO::FETCH_BOTH)){
+			$accordionRow[$i]['id']   				=  $row['id'];
+			$accordionRow[$i]['accordion_title'] 	=  $row['accordion_title'];
+			$accordionRow[$i]['accordion_content']  =  $row['accordion_content'];
+			$i++;
+		}
+		return $accordionRow;
+	}
+	public static function RemoveAccordion($id){
+		$db  = Db::getConnection();
+		//Запрос
+		$sql = 'DELETE FROM about_accordion WHERE id = ?';
+		$stmt = $db->prepare($sql);
+		//Указываем, что это строка или число
+		$stmt->bindParam(1, $id, PDO::PARAM_INT);
+		//Выполняем запрос
+		return $stmt->execute();
+	}
 }
-	// public static function viewDocuments(){
-	// 	$db      	  = Db::getConnection();
-	// 	$documentsRow = array();
-	// 	$sql     	  = "SELECT * FROM about_accordion";
-	// 	$stmt         = $db->prepare($sql);
-	// 	$stmt->execute();
-	// 	$i = 0;
-	// 	while($row = $stmt->fetch(PDO::FETCH_BOTH)){
-	// 		$accordionRow[$i]['id']   				=  $row['id'];
-	// 		$accordionRow[$i]['accordion_title'] 	=  $row['accordion_title'];
-	// 		$accordionRow[$i]['accordion_content']  =  $row['accordion_content'];
-	// 		$i++;
-	// 	}
-	// 	return $accordionRow;
-	// }
-	// public static function removeDocuments($id){
-	// 	$db  = Db::getConnection();
-	// 	//Запрос
-	// 	$sql = 'DELETE FROM about_accordion WHERE id = ?';
-	// 	$stmt = $db->prepare($sql);
-	// 	//Указываем, что это строка или число
-	// 	$stmt->bindParam(1, $id, PDO::PARAM_INT);
-	// 	//Выполняем запрос
-	// 	return $stmt->execute();
-	// }
 ?>

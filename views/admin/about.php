@@ -36,16 +36,21 @@
 						<?endif;?>
 					</div>
 					<div class="col-md-6">
+						<center><h4 class="h4-b">Определения</h4></center>
 						<?foreach ($accordionRow as $row):?>
 						<div class="accordion">
-							<center><h4 class="h4-b">Определения</h4></center>
 							<section class="accordion_item">
-								<h3 class="title_block"><?=$contactsRow['accordion_title'];?></h3>
+								<h3 class="title_block"><?=$row['accordion_title'];?></h3>
 								<div class="info">
-									<p class="info_item"><?=$contactsRow['accordion_content'];?></p>
+									<p class="info_item"><?=$row['accordion_content'];?></p>
 								</div>
 							</section>
 						</div>
+						<?if(!empty($_SESSION['admin'])):?>
+						<form method="POST" action="">
+							<input type="hidden" name="idAccordion" value="<?=$row['id'];?>">
+							<input class="removeNews" type="submit" name="removeAccordion" value="Удалить">
+							<?endif;?>
 						<?endforeach;?>
 						<?if(!empty($_SESSION['admin'])):?>
 						<form method="POST" action="" id="AddAccordionForm">

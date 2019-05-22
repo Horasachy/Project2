@@ -10,6 +10,8 @@ return array(
 
 	
 	 //User	
+	'about/([0-9]+)'=> 'about/about/$1', 	
+	'about' 		=> 'about/about',
 	'news/([0-9]+)' => 'index/view/$1',
 	'news' 			=> 'index/index/', 
 	'' 				=> 'index/index', 

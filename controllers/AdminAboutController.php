@@ -3,6 +3,10 @@ class AdminAboutController extends AdminNewsController{
 	public function actionAbout(){
 		$AdminNewsController = new AdminNewsController();
 		$AdminNewsController->UpdateContactInfo();
+		if (isset($_POST['exit'])) {
+			Session::logout();
+		}
+		Session::sessionExists();
 		$row = AdminHeader::headerInfo();
 		//обнавление контактов
 		$this->UpdateContacts();	
@@ -14,11 +18,16 @@ class AdminAboutController extends AdminNewsController{
 		$this->removeDocument();
 		//вывод документов
 		$documentRow = AdminAbout::viewDocuments();
+		//вывод акордиона
+		$accordionRow = AdminAbout::viewAccordion();
 		//добавление аккордиона
 		$this->AddAccordion();
+		//Удаление аккордиона
+		$this->removeAccordion();
 		$this->page['title'] = 'О нас';
 		require_once ROOT."/views/admin/about.php";
 		return true;
+		
 	}
 	public function actionViewDocuments($id){
 		$document = AdminAbout::viewDocument($id);
@@ -97,20 +106,20 @@ class AdminAboutController extends AdminNewsController{
 		}
 		return true;
 	}
-	// //Удаление акордиона
-	// public function removeAccordion(){
-	// 	if(!empty($_POST['removeDocument'])){
-	// 		$removeDocument  = $_POST['removeDocument'];
-	// 	}
-	// 	if(!empty($_POST['accordion_title'])){
-	// 		$id   	 = $_POST['accordion_title'];
-	// 	}
-	// 	if (isset($removeDocument)) {
-	// 		if(AdminAbout::removeDocuments($id)){
-	// 			header("Location:/adminAbout");
-	// 		}
-	// 	}
-	// 	return true;
-	// }
+	//Удаление акордиона
+	public function removeAccordion(){
+		if(!empty($_POST['removeAccordion'])){
+			$removeAccordion  = $_POST['removeAccordion'];
+		}
+		if(!empty($_POST['idAccordion'])){
+			$id   	 = $_POST['idAccordion'];
+		}
+		if (isset($removeAccordion)) {
+			if(AdminAbout::RemoveAccordion($id)){
+				header("Location:/adminAbout");
+			}
+		}
+		return true;
+	}
 }
 ?>
