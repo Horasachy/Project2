@@ -352,6 +352,29 @@ embed{
     font-weight: bold; 
     opacity: 1;
 }
+.removeAbout{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 2px 16px 2px 16px;
+    text-decoration: none;
+    color: #d54747;
+    background: white;
+    border-radius: 3px;
+    border: solid #d54747;
+    font-weight: bold;
+    transition: .7s;
+}
+.removeAbout:hover{
+
+    padding: 3px 17px 3px 17px;
+    text-decoration: none;
+    color: white;
+    background: #d54747;
+    border: 2px solid #d54747;
+    transition: .7s;
+    font-weight: bold; 
+    opacity: 1;
+}
 .a-pag{
     margin-top: 10px;
     margin-left: 5px;
@@ -388,6 +411,7 @@ embed{
     margin-bottom: -20px;
 }
 #AddNewsForm{
+    background: #b1c8f7;
     margin-top: 50px;
     padding: 20px;
     background: white;
@@ -397,12 +421,23 @@ embed{
     background: white;
 }
 #AddDocumentsForm{
+     -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    border-radius: 3px;
     padding: 20px;
     background: white;
 }
 #AddAccordionForm{
     padding: 20px;
     background: white;
+}
+.about_form{
+    margin-top: 10px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    border-radius: 3px;
 }
 .logo2{
     color: black;

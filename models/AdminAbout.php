@@ -91,7 +91,7 @@ public static function addAccordion($accordion_title, $accordion_content){
 	public static function viewAccordion(){
 		$db      	  = Db::getConnection();
 		$documentsRow = array();
-		$sql     	  = "SELECT * FROM about_accordion";
+		$sql     	  = "SELECT * FROM about_accordion ORDER BY id ASC";
 		$stmt         = $db->prepare($sql);
 		$stmt->execute();
 		$i = 0;
@@ -105,12 +105,9 @@ public static function addAccordion($accordion_title, $accordion_content){
 	}
 	public static function RemoveAccordion($id){
 		$db  = Db::getConnection();
-		//Запрос
 		$sql = 'DELETE FROM about_accordion WHERE id = ?';
 		$stmt = $db->prepare($sql);
-		//Указываем, что это строка или число
 		$stmt->bindParam(1, $id, PDO::PARAM_INT);
-		//Выполняем запрос
 		return $stmt->execute();
 	}
 }
