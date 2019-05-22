@@ -3,11 +3,11 @@ class AdminNewsController {
 	//Вывод новостей с пагинацией;
 	public function actionIndex(){	
 		//Обнавление контактной информации
-		AdminNewsController::UpdateContactInfo();
+		$this->UpdateContactInfo();
 		//Добавление новости
-		AdminNewsController::addNews();
+		$this->addNews();
 		//Удаление новости
-		AdminNewsController::removeNews();
+		$this->removeNews();
 		//Проверка сессии
 		Session::sessionExists();
 		//Сколько страниц выводим
@@ -50,8 +50,7 @@ class AdminNewsController {
 		return true;
 	}
 	//добавление новости
-	public static function addNews(){
-
+	public function addNews(){
 		if(!empty($_POST['addNews'])){
 			$submit        = $_POST['addNews'];
 		}
@@ -85,7 +84,7 @@ class AdminNewsController {
 
 	}
 	//Удаление новости
-	public static function removeNews(){
+	public function removeNews(){
 		if(!empty($_POST['removeNews'])){
 			$submit  = $_POST['removeNews'];
 		}
@@ -111,7 +110,7 @@ class AdminNewsController {
 
 	}
 	//Апдейт контактной информации
-	public static function UpdateContactInfo(){
+	public function UpdateContactInfo(){
 		if(!empty($_POST['headerInfo'])){
 			$submit   = $_POST['headerInfo'];
 		}

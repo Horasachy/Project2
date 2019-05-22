@@ -69,7 +69,7 @@
 					<a class="nav-link" href="/adminNews">Главная<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">О нас</a>
+					<a class="nav-link" href="/adminAbout">О нас</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Курсы</a>

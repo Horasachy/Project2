@@ -1,4 +1,3 @@
-<div class="wrapper">
 <?php require ROOT.'/views/layouts/admin_header.php'?>
 <!-- Контент -->
 
@@ -37,4 +36,3 @@
 	</div>
 
 <?php require ROOT.'/views/layouts/admin_footer.php'?>
-</div>

@@ -1,5 +1,5 @@
 <?php
-	class AdminAccountController{
+	class AdminAccountController {
 		public function actionAccount(){
 			Session::sessionExists();
 			$id         = $_SESSION['admin'];
