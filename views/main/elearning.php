@@ -1,4 +1,4 @@
-<?php require ROOT.'/views/layouts/admin_header.php'?>
+<?php require ROOT.'/views/layouts/header.php'?>
 <!-- Контент -->
 <div class="container">
 	<div class="row">
@@ -35,4 +35,4 @@
 		<!--/правые блоки-->
 	</div>
 </div>
-<?php require ROOT.'/views/layouts/admin_footer.php'?>
+<?php require ROOT.'/views/layouts/footer.php'?>
