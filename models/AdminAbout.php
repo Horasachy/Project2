@@ -64,12 +64,9 @@ class AdminAbout{
 	}
 	public static function removeDocuments($id){
 		$db  = Db::getConnection();
-		//Запрос
 		$sql = 'DELETE FROM about_documents WHERE id = ?';
 		$stmt = $db->prepare($sql);
-		//Указываем, что это строка или число
 		$stmt->bindParam(1, $id, PDO::PARAM_INT);
-		//Выполняем запрос
 		return $stmt->execute();
 	}
 

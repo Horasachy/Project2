@@ -75,7 +75,7 @@
 					<a class="nav-link" href="#">Курсы</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Электронное образование</a>
+					<a class="nav-link" href="/adminElearning">Электронное образование</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Детская школа 3D-SIZE</a>

@@ -1,8 +1,6 @@
 <?php
 class AboutController{
 	public function actionAbout(){
-		$AdminAboutController = new AdminAboutController();
-
 		$contactsRow = AdminAbout::viewContacts();
 		$documentRow = AdminAbout::viewDocuments();
 		$accordionRow = AdminAbout::viewAccordion();
@@ -14,3 +12,4 @@ class AboutController{
 		return true;
 	}
 }
+?>

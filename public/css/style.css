@@ -61,6 +61,12 @@ embed{
     border-left: solid 1px #aaa;
     background-color: #eee;
 }
+.elearning{
+    padding: 10px 20px 10px 20px;
+    background: white;
+    margin-top: 30px;
+    border-radius: 3px;
+}
 .about{
     padding: 10px 20px 10px 20px;
     background: white;
