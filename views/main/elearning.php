@@ -13,7 +13,7 @@
 						</div>
 					</section>
 					<?php foreach ($doc_spo as $row):?>
-						<li><a target="_blank" href="adminElearning/<?=$row['id']?>"><?=$row['name']?></a></li>
+						<li><a class="documents" target="_blank" href="adminElearning/<?=$row['id']?>"><?=$row['doc_name']?></a></li>
 					<?php endforeach;?>
 				</div>
 				<!-- конец блока аккордеон -->

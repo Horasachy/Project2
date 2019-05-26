@@ -21,7 +21,7 @@
 						<?endif;?>
 						<center><h4 class="h4-b">Документы</h4></center>
 						<?foreach ($documentRow as $row):?>
-						<li><a target="_blank" href="adminAbout/<?=$row['id']?>"><?=$row['name']?></a></li>
+						<li><a class="documents" target="_blank" href="adminAbout/<?=$row['id']?>"><?=$row['doc_name']?></a></li>
 						<?if(!empty($_SESSION['admin'])):?>
 						<form method="POST" action="">
 							<input type="hidden" name="idDocuments" value="<?=$row['id'];?>">
@@ -33,6 +33,7 @@
 						<form enctype="multipart/form-data" method="POST" action="" id="AddDocumentsForm">
 							<h4 style="margin-bottom: 20px;">Добавление документов</h4>
 							<input type="file" name="document" class="form-control"><br>
+							<input type="text" name="doc_name" class="form-control"><br>
 							<input class="addNews" type="submit" name="addDocument" value="Опубликовать">
 						</form>
 						<?endif;?>

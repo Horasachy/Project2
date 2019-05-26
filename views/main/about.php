@@ -11,7 +11,7 @@
 						<?=$contactsRow['contacts'];?>
 						<center><h4 class="h4-b">Документы</h4></center>
 						<?foreach ($documentRow as $row):?>
-						<li><a target="_blank" href="adminAbout/<?=$row['id']?>"> <?=$row['name']?></a></li>
+						<li><a class="documents" target="_blank" href="adminAbout/<?=$row['id']?>"> <?=$row['doc_name']?></a></li>
 						<?endforeach;?>
 					</div>
 					<div class="col-md-6">

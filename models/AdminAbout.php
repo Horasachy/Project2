@@ -18,19 +18,21 @@ class AdminAbout{
 		return $row;
 	}
 
-	public static function addDocuments($name, $type, $data){
+	public static function addDocuments($name, $type, $data, $filename){
 		$db  = Db::getConnection();
 		//Запрос
 		$sql = 'INSERT INTO about_documents(
 								name,
 								mime,
-								data) 
+								data,
+								doc_name) 
 								VALUES 
-								(?, ?, ?)';
+								(?, ?, ?, ?)';
 		$stmt = $db->prepare($sql);
 		$stmt->bindParam(1, $name, PDO::PARAM_STR);
 		$stmt->bindParam(2, $type, PDO::PARAM_STR);
 		$stmt->bindParam(3, $data);
+		$stmt->bindParam(4, $filename, PDO::PARAM_STR);
 		return $stmt->execute();
 	}
 
@@ -42,10 +44,11 @@ class AdminAbout{
 		$stmt->execute();
 		$i = 0;
 		while($row = $stmt->fetch(PDO::FETCH_BOTH)){
-			$documentsRow[$i]['id']   =  $row['id'];
-			$documentsRow[$i]['name'] =  $row['name'];
-			$documentsRow[$i]['mime'] =  $row['mime'];
-			$documentsRow[$i]['data'] =  $row['data'];
+			$documentsRow[$i]['id']   	  =  $row['id'];
+			$documentsRow[$i]['name'] 	  =  $row['name'];
+			$documentsRow[$i]['mime'] 	  =  $row['mime'];
+			$documentsRow[$i]['data'] 	  =  $row['data'];
+			$documentsRow[$i]['doc_name'] =  $row['doc_name'];
 			$i++;
 		}
 		return $documentsRow;

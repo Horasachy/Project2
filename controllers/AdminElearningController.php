@@ -34,7 +34,7 @@ class AdminElearningController{
 		}
 		if (isset($removeDocumentSpo)) {
 			if(AdminElearning::removeDocumentSpo($id)){
-				header("Location:/elearning.php");
+				header("Location:/adminElearning");
 			}
 		}
 		return true;
@@ -45,24 +45,20 @@ class AdminElearningController{
 		if(!empty($_POST['submit'])){
 			$submit  = $_POST['submit'];
 		}
-		if (!empty($_FILES['documentSpo']['name'])) {
-			$name  = $_FILES['documentSpo']['name'];	
-		}
-		if (!empty($_FILES['documentSpo']['type'])) {
-			$type  = $_FILES['documentSpo']['type'];
-		}
-		if (!empty($_FILES['documentSpo']['name'])) {
-			$data  = file_get_contents($_FILES['documentSpo']['tmp_name']);
-		}	
-		if (!empty($_POST['documentNameSpo'])) {
-			$documentNameSpo  = $_POST['documentNameSpo'];
-		}	
-		if (isset($submit)){
-			if(AdminElearning::addDocumentSpo($name, $type, $data, $documentNameSpo)){
-				header("Location:/adminElearning");
-			}
-		}
-		return true;
+		if (!empty($_FILES['documentSpo'])) {
+            $name     = $_FILES['documentSpo']['name'];
+            $type  	  = $_FILES['documentSpo']['type'];
+            $data	  = $_FILES['documentSpo']['tmp_name'];
+            $filename = $_POST['documentNameSpo'];
+                if(isset($submit)){
+	                if(AdminElearning::addDocumentSpo($name, $type, $data, $filename)){
+						header("Location:/adminElearning");
+	            	}
+	       		}	
+	    	}
+	    	return true;
+	    }
+			
 	}		
-}
+
 ?>

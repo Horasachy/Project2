@@ -13,7 +13,7 @@
 								</div>
 							</section>
 							<?php foreach ($doc_spo as $row):?>
-								<li><a target="_blank" href="adminElearning/<?=$row['id']?>"><?=$row['name']?></a></li>
+								<li><a class="documents" target="_blank" href="adminElearning/<?=$row['id']?>"><?=$row['doc_name']?></a></li>
 									<?if(!empty($_SESSION['admin'])):?>
 									<form method="POST" action="">
 										<input type="hidden" name="idDocumentsSpo" value="<?=$row['id'];?>">
@@ -22,12 +22,14 @@
 									</form>
 							<?php endforeach;?>
 						</div>
+						<?if(!empty($_SESSION['admin'])):?>
 							<form enctype="multipart/form-data" method="POST" action="" id="AddDocumentsForm">
 								<h4 style="margin-bottom: 20px;">Добавление документов</h4>
 								<input type="file" name="documentSpo" class="form-control"><br>
-								<input type="text" name="documentNameSpo" class="form-control"><br>
+								<input type="text" name="documentNameSpo" class="form-control" placeholder="Имя документа:"><br>
 								<input class="addNews" type="submit" name="submit" value="Опубликовать">
 							</form>
+							<?endif;?>
 						<!-- конец блока аккордеон -->
 
 			</div>

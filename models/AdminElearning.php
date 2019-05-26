@@ -1,6 +1,6 @@
 <?php
 class AdminElearning{
-	public static function addDocumentSpo($name, $documentNameSpo, $type, $data){
+	public static function addDocumentSpo($name, $type, $data, $filename){
 		$db  = Db::getConnection();
 		$sql = "INSERT INTO spo_elearning(
 									name,
@@ -10,11 +10,10 @@ class AdminElearning{
 									VALUES 
 									(?, ?, ?, ?)";
 		$stmt = $db->prepare($sql);
-		$stmt->bindParam(1, $name, 			  PDO::PARAM_STR);
-		$stmt->bindParam(2, $documentNameSpo, PDO::PARAM_STR);
-		$stmt->bindParam(3, $type, 			  PDO::PARAM_STR);
-		$stmt->bindParam(4, $data);
-		
+		$stmt->bindParam(1, $name, 	   PDO::PARAM_STR);
+		$stmt->bindParam(2, $type, 	   PDO::PARAM_STR);
+		$stmt->bindParam(3, $data);
+		$stmt->bindParam(4, $filename, PDO::PARAM_STR );
 		return $stmt->execute();
 	}
 

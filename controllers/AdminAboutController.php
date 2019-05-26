@@ -56,17 +56,16 @@ class AdminAboutController extends AdminNewsController{
 		if(!empty($_POST['addDocument'])){
 			$addDocument  = $_POST['addDocument'];
 		}
-		if (!empty($_FILES['document']['name'])) {
+		if (!empty($_FILES['document'])) {
 			$name  = $_FILES['document']['name'];			
-		}
-		if (!empty($_FILES['document']['type'])) {
 			$type  = $_FILES['document']['type'];
-		}
-		if (!empty($_FILES['document']['name'])) {
 			$data  = file_get_contents($_FILES['document']['tmp_name']);
+		}
+		if (!empty($_POST['doc_name'])) {
+			$filename = $_POST['doc_name'];
 		}	
 		if (isset($addDocument)) {
-			if(AdminAbout::addDocuments($name, $type, $data)){
+			if(AdminAbout::addDocuments($name, $type, $data, $filename)){
 				header("Location:/adminAbout");
 			}
 		}
