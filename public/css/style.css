@@ -1,9 +1,17 @@
+@font-face {
+    font-family: 'Fira Sans';
+    src: local('Fira Sans Book'), local('FiraSans-Book'), url('../fonts/Firasansbook.woff2') format('woff2'), url('../fonts/Firasansbook.woff') format('woff'), url('../fonts/Firasansbook.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
 html{
 	height: 100%;
+    text-decoration: none;
+    outline: none;
 }
 
 body{
-	font-family: Arial, sans-serif;
+	font-family: Fira Sans;
 	font-size: 17px;
 	background: #eeeeee;
     margin: 0;
@@ -14,7 +22,6 @@ body{
 li{
 	list-style: none;
 }
-
 
 aside {
     background: white;
@@ -60,6 +67,9 @@ embed{
 ::-webkit-scrollbar-track:hover{
     border-left: solid 1px #aaa;
     background-color: #eee;
+}
+.partners{
+    color: black;
 }
 .documents{
     text-decoration: none;

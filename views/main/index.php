@@ -13,9 +13,7 @@
 							<li style="margin-left: 10px;"><i class="fa fa-calendar" aria-hidden="true"></i> <?=$row['date'];?></li>
 						</ul>	
 					</div>
-					<?if(!empty($row['data']) and !empty($row['mime'])):?>
-					<?="<embed src='data:".$row['mime'].";base64,".base64_encode($row['data'])."' width='100%'; height='50%'/>";?>
-					<?endif;?>
+					
 					<p>
 						<?=$row['short_content']?>
 					</p>
@@ -74,44 +72,49 @@
 						<h4 class="h4-b">
 							Партнеры
 						</h4>
-					</aside>
-					<aside>
-						<h4 class="h4-b">
-							Фотоальбом
-						</h4>
-					</aside>
+						<a href="http://www.bask-rb.ru/" class="partners">БАСК</a><br>
+						<a href="https://umney.ru/" class="partners">УМНЕЙ</a><br>
+						<a href="https://www.knauf.ru/academy/information/learning-centers/#showtab-tab1428411_3" class="partners">КНАУФ</a><br>
+						<a href=" https://www.bosch-professional.com/ru/ru/informaciya/obrazovanie/cpravochnik-resursnyx-centrov-bosch/" class="partners">BOSCH</a><br>
+						<a href=" https://worldskills.ru/" class="partners">World Skills</a><br>
+						<a href="https://bkrb.ru/ " class="partners">Башкирский кирпич</a><br>
+						<aside>
+							<h4 class="h4-b">
+								Фотоальбом
+							</h4>
+						</aside>
+					</div>
+					<!--/правые блоки-->
 				</div>
-				<!--/правые блоки-->
-			</div>
-			<!--Обратная связь-->
-			<div class="row">
-				<div class="col-md-9">
-					<div class="feedback">
-						<form id="formajax">
-							<h4>Обратная связь</h4>
-							<input type="email" id="email" name="email" placeholder="Email:" class="form-control"><br>
-							<input type="text" id="name" name="name" placeholder="Имя:" class="form-control"><br>
-							<textarea name="message" id="message" placeholder="Сообщение:" class="form-control"></textarea><br>
-							<button type="button" id="send" class="btn-fb">Отправить</button>
-							<div id="error"></div>
-						</form>
+				<!--Обратная связь-->
+				<div class="row">
+					<div class="col-md-9">
+						<div class="feedback">
+							<form id="formajax">
+								<h4>Обратная связь</h4>
+								<input type="email" id="email" name="email" placeholder="Email:" class="form-control"><br>
+								<input type="text" id="name" name="name" placeholder="Имя:" class="form-control"><br>
+								<textarea name="message" id="message" placeholder="Сообщение:" class="form-control"></textarea><br>
+								<button type="button" id="send" class="btn-fb">Отправить</button>
+								<div id="error"></div>
+							</form>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!--/Обратная связь-->
+				<!--/Обратная связь-->
 
-			<!--GoogleMaps-->
-		<div class="GMAP">
-			<div class="row">
-				<div class="col-md-8">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d771.7133859194024!2d56.03731681827097!3d54.792817616741516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d93781829852af%3A0x2729b7dd064ae968!2z0JHQsNGI0LrQuNGA0YHQutC40Lkg0LDRgNGF0LjRgtC10LrRgtGD0YDQvdC-LdGB0YLRgNC-0LjRgtC10LvRjNC90YvQuSDQutC-0LvQu9C10LTQtg!5e0!3m2!1sru!2sru!4v1558114968270!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<!--GoogleMaps-->
+				<div class="GMAP">
+					<div class="row">
+						<div class="col-md-8">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d771.7133859194024!2d56.03731681827097!3d54.792817616741516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d93781829852af%3A0x2729b7dd064ae968!2z0JHQsNGI0LrQuNGA0YHQutC40Lkg0LDRgNGF0LjRgtC10LrRgtGD0YDQvdC-LdGB0YLRgNC-0LjRgtC10LvRjNC90YvQuSDQutC-0LvQu9C10LTQtg!5e0!3m2!1sru!2sru!4v1558114968270!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>
 				</div>
+				<!--/GoogleMaps-->
+
 			</div>
 		</div>
-			<!--/GoogleMaps-->
-
-		</div>
-	</div>
-	<?php require ROOT.'/views/layouts/footer.php'?>
+		<?php require ROOT.'/views/layouts/footer.php'?>
 
 

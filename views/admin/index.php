@@ -12,11 +12,14 @@
 							<input type="file" name="image" class="form-control"><br>
 							<input type="text" name="title" placeholder="Заголовок:" class="form-control"><br>
 							<input type="text" name="author_name" placeholder="Кто опубликовал:" class="form-control"><br>
-							<textarea name="short_content" placeholder="Короткая новость:" class="form-control"></textarea><br>
+							<textarea id="ins" name="short_content" placeholder="Короткая новость:" class="form-control"></textarea>
+							<button id="btn-add-html" class="btn-add-html" onclick='Insert("<p></p>", "ins")'>Обзац</button><br>
+							<br>
 							<textarea name="content" placeholder="Полная новость:" class="form-control"></textarea><br>
 							<input class="addNews" type="submit" name="addNews" value="Опубликовать">
 							<div class="errors"></div>
 						</form>
+						
 					</div>
 				</div>
 				<?endif;?>

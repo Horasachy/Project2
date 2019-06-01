@@ -43,6 +43,7 @@ class AdminAboutController extends AdminNewsController{
 		}
 		if(!empty($_POST['contacts'])){
 			$contacts    = $_POST['contacts'];
+			$contacts    = htmlspecialchars_decode($contacts);
 		}
 		if (isset($addContacts)) {
 			if(AdminAbout::UpdateCont($contacts)){
@@ -97,6 +98,7 @@ class AdminAboutController extends AdminNewsController{
 		}
 		if(!empty($_POST['accordion_content'])){
 			$accordion_content    = $_POST['accordion_content'];
+			$accordion_content	  = htmlspecialchars_decode($accordion_content);
 		}
 		if (isset($addAccordion)) {
 			if(AdminAbout::addAccordion($accordion_title, $accordion_content)){

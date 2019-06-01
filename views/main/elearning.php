@@ -25,14 +25,19 @@
 				<h4 class="h4-b">
 					Партнеры
 				</h4>
-			</aside>
-			<aside>
-				<h4 class="h4-b">
-					Фотоальбом
-				</h4>
-			</aside>
+				<a href="http://www.bask-rb.ru/" class="partners">БАСК</a><br>
+				<a href="https://umney.ru/" class="partners">УМНЕЙ</a><br>
+				<a href="https://www.knauf.ru/academy/information/learning-centers/#showtab-tab1428411_3" class="partners">КНАУФ</a><br>
+				<a href=" https://www.bosch-professional.com/ru/ru/informaciya/obrazovanie/cpravochnik-resursnyx-centrov-bosch/" class="partners">BOSCH</a><br>
+				<a href=" https://worldskills.ru/" class="partners">World Skills</a><br>
+				<a href="https://bkrb.ru/ " class="partners">Башкирский кирпич</a><br>
+				<aside>
+					<h4 class="h4-b">
+						Фотоальбом
+					</h4>
+				</aside>
+			</div>
+			<!--/правые блоки-->
 		</div>
-		<!--/правые блоки-->
 	</div>
-</div>
-<?php require ROOT.'/views/layouts/footer.php'?>
+	<?php require ROOT.'/views/layouts/footer.php'?>

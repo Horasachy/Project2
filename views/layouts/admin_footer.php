@@ -2,6 +2,7 @@
 				Информация
 			</div>
 	<script src="../../public/js/jquery.min.js"></script>
+	<script src="../../public/js/btn-add-html-tegs.js"></script>
 	<script src="../../public/js/active-link.js"></script>
 	<script src="../../public/js/all.js"></script>
 	<script src="../../public/js/accordion.js"></script>
