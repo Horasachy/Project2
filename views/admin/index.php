@@ -12,10 +12,24 @@
 							<input type="file" name="image" class="form-control"><br>
 							<input type="text" name="title" placeholder="Заголовок:" class="form-control"><br>
 							<input type="text" name="author_name" placeholder="Кто опубликовал:" class="form-control"><br>
-							<textarea id="ins" name="short_content" placeholder="Короткая новость:" class="form-control"></textarea>
-							<button id="btn-add-html" class="btn-add-html" onclick='Insert("<p></p>", "ins")'>Обзац</button><br>
+							<textarea onselect="storeCaret(this)" onclick="storeCaret(this)" onkeyup="storeCaret(this)" rows="10" id="ins-sc" name="short_content" placeholder="Короткая новость:" class="form-control"></textarea>
+							<button type="button" onclick="insertText(document.getElementById('ins-sc'),'<p></p>')">Обзац</button>
+							<button type="button" onclick="insertText(document.getElementById('ins-sc'),'<em></em>')"><em>K</em></button>
+							<button type="button" onclick="insertText(document.getElementById('ins-sc'),'<u></u>')"><u>Ч</u></button>
+							<button type="button" onclick="insertText(document.getElementById('ins-sc'),'<b></b>')"><b>Ж</b></button>
+							<button type="button" onclick="insertText(document.getElementById('ins-sc'),'<br>')">Отступ</button>
+							<button type="button" onclick="insertText(document.getElementById('ins-sc'),'<a target=\'_blank\' href=\'Полная ссылка\'>Название ссылки</a>')">Ссылка</button>
 							<br>
-							<textarea name="content" placeholder="Полная новость:" class="form-control"></textarea><br>
+							<br>
+							<textarea onselect="storeCaret(this)" onclick="storeCaret(this)" onkeyup="storeCaret(this)" rows="10" id="ins-s" name="content" placeholder="Полная новость:" class="form-control"></textarea>
+							<button type="button" onclick="insertText(document.getElementById('ins-s'),'<p></p>')">Обзац</button>
+							<button type="button" onclick="insertText(document.getElementById('ins-s'),'<em></em>')"><em>K</em></button>
+							<button type="button" onclick="insertText(document.getElementById('ins-s'),'<u></u>')"><u>Ч</u></button>
+							<button type="button" onclick="insertText(document.getElementById('ins-s'),'<b></b>')"><b>Ж</b></button>
+							<button type="button" onclick="insertText(document.getElementById('ins-s'),'<br>')">Отступ</button>
+							<button type="button" onclick="insertText(document.getElementById('ins-s'),'<a target=\'_blank\' href=\'Полная ссылка\'>Название ссылки</a>')">Ссылка</button>
+							<br>
+							<br>
 							<input class="addNews" type="submit" name="addNews" value="Опубликовать">
 							<div class="errors"></div>
 						</form>
@@ -32,9 +46,9 @@
 							<li style="margin-left: 10px;"><i class="fa fa-calendar" aria-hidden="true"></i> <?=$row['date'];?></li>
 						</ul>	
 					</div>
-					<?if(!empty($row['data']) and !empty($row['mime'])):?>
+				<!-- 	<?if(!empty($row['data']) and !empty($row['mime'])):?>
 					<?="<embed src='data:".$row['mime'].";base64,".base64_encode($row['data'])."' width='100%'; height='50%'/>";?>
-					<?endif;?>
+					<?endif;?> -->
 					<p>
 						<?=$row['short_content']?>
 					</p>

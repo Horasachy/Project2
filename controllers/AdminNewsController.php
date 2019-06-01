@@ -51,28 +51,18 @@ class AdminNewsController {
 	}
 	//добавление новости
 	public function addNews(){
-		if(!empty($_POST['addNews'])){
+		if(!empty($_POST['addNews']) && !empty($_POST['title']) && !empty($_POST['short_content']) && !empty($_POST['content']) && !empty($_POST['author_name'])){
 			$submit        = $_POST['addNews'];
-		}
-		if(!empty($_POST['title'])){
 			$title         = $_POST['title'];
-		}
-		if(!empty($_POST['short_content'])){
 			$short_content = $_POST['short_content'];
-		}
-		if(!empty($_POST['content'])){
+			$short_content = htmlspecialchars_decode($short_content);
 			$content   	   = $_POST['content'];
-		}
-		if(!empty($_POST['author_name'])){
+			$content       = htmlspecialchars_decode($content);
 			$author_name   = $_POST['author_name'];
 		}
-		if (!empty($_FILES['image']['name'])) {
+		if (!empty($_FILES['image'])) {
 			$name  = $_FILES['image']['name'];			
-		}
-		if (!empty($_FILES['image']['type'])) {
 			$type  = $_FILES['image']['type'];
-		}
-		if (!empty($_FILES['image']['name'])) {
 			$data  = file_get_contents($_FILES['image']['tmp_name']);
 		}	
 		if (isset($submit)) {
@@ -85,10 +75,8 @@ class AdminNewsController {
 	}
 	//Удаление новости
 	public function removeNews(){
-		if(!empty($_POST['removeNews'])){
+		if(!empty($_POST['removeNews']) && ($_POST['idNews'])){
 			$submit  = $_POST['removeNews'];
-		}
-		if(!empty($_POST['idNews'])){
 			$id   	 = $_POST['idNews'];
 		}
 		if (isset($submit)) {
@@ -111,13 +99,9 @@ class AdminNewsController {
 	}
 	//Апдейт контактной информации
 	public function UpdateContactInfo(){
-		if(!empty($_POST['headerInfo'])){
+		if(!empty($_POST['headerInfo']) && $_POST['phone'] && $_POST['email']){
 			$submit   = $_POST['headerInfo'];
-		}
-		if(!empty($_POST['phone'])){
 			$phone    = $_POST['phone'];
-		}
-		if(!empty($_POST['email'])){
 			$email    = $_POST['email'];
 		}
 		if (isset($submit)){

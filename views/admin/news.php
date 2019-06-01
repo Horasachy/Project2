@@ -13,7 +13,7 @@
 						</ul>	
 					</div>
 					<?if(!empty($newsItem['data']) and !empty($newsItem['mime'])):?>
-					<?="<embed src='data:".$newsItem['mime'].";base64,".base64_encode($newsItem['data'])."' width='50%'; height='50%'/>";?>
+					<center><?="<embed src='data:".$newsItem['mime'].";base64,".base64_encode($newsItem['data'])."' width='auto'; height='auto'/>";?></center>
 					<?endif;?>
 					<p><?php echo $newsItem['content'];?></p>
 				</article>

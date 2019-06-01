@@ -44,9 +44,9 @@ header{
 embed{
     margin-top: 5px;
     margin-bottom: 20px;
-    height: 60%;
-    width: 100%;
-    text-align: center;
+    height: auto;
+    width: auto;
+
 }
 ::-webkit-scrollbar{
     width:12px;
@@ -68,9 +68,7 @@ embed{
     border-left: solid 1px #aaa;
     background-color: #eee;
 }
-.partners{
-    color: black;
-}
+
 .documents{
     text-decoration: none;
     font-size: 20px;
@@ -104,7 +102,7 @@ embed{
     border-bottom: solid #109c83;
     display: block;
     content: "";
-    height: 8px;
+    height: 7px;
     width: 0%;
     left:50%;
     position:absolute;
@@ -277,6 +275,7 @@ embed{
 }
 .h4-b{
     border-bottom: solid #079a80 2px;
+    text-align: center;
 }
 .footer{
     margin-top: 169px;
