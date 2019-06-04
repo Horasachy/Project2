@@ -7,33 +7,25 @@
 				<!-- блок аккордеон -->
 				<div class="col-md-12">
 						<center><h4 class="h4-b">Контакты</h4></center>
-						<b class="about_title">Наименование:</b><br>
-						<p class="about_text">Многофункциональный центр прикладных квалификаций государственного автономного профессионального образовательного учреждения Башкирский колледж архитектуры, строительства и коммунального хозяйства (МЦПК ГАПОУ БАСК)</p>
-						<b class="about_title">Адрес:</b><br>
-						<p class="about_text">450055, Республика Башкортостан, г. Уфа, проспект Октября, 174, каб. 13.</p>
-						<b class="about_title">Тел.:</b><br>
-						<p class="about_text">8(347) 292-72-18</p>
-						<b class="about_title">Моб. тел.:</b><br>
-						<p class="about_text">8-987-09-11-047</p>
-						<b class="about_title">Эл. почта:</b><br>
-						<p class="about_text">bask-uc@mail.ru<br>
-						bask_sdo@mail.ru (Электронное образование)</p>
-						<b class="about_title">Режим и график работы:</b><br>
-						<p class="about_text">
-							Понедельник - Пятница<br>
-							8:30 – 17:30<br>
-							Перерыв: 12:30 – 13:30<br>
-						</p>
+						<?=$contactsRow['contacts'];?>
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<center><h4 class="h4-b">Документы</h4></center>
-						<?foreach ($documentRow as $row):?>
-						<li><a class="documents" target="_blank" href="adminAbout/<?=$row['id']?>"> <?=$row['doc_name']?></a></li>
+						<center><h4 class="h4-b"></h4></center>
+						<div class="accordion">
+							<section class="accordion_item">
+								<h3 class="title_block">Документы</h3>
+								<div class="info">
+										<?foreach ($documentRow as $row):?>
+						<li><a target="_blank" href="adminAbout/<?=$row['id']?>"> <?=$row['doc_name']?></a></li>
 						<?endforeach;?>
+								</div>
+							</section>
+						</div>
+					
 					</div>
 					<div class="col-md-6">
-						<center><h4 class="h4-b">Определения</h4></center>
+						<center><h4 class="h4-b"></h4></center>
 						<?foreach ($accordionRow as $row):?>
 						<div class="accordion">
 							<section class="accordion_item">
@@ -61,10 +53,22 @@
 				<a href=" https://www.bosch-professional.com/ru/ru/informaciya/obrazovanie/cpravochnik-resursnyx-centrov-bosch/" class="partners">BOSCH</a><br>
 				<a href=" https://worldskills.ru/" class="partners">World Skills</a><br>
 				<a href="https://bkrb.ru/ " class="partners">Башкирский кирпич</a><br>
+			</aside>
 				<aside>
+					<a href="/gallery" style="cursor: pointer; text-decoration: none; list-style: none; color: black;">
 					<h4 class="h4-b">
 						Фотоальбом
 					</h4>
+					<img class="photo" src="../../public/gallery/1.jpg" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/2.jpg" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/3.gif" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/4.jpg" width="40" height="40" alt="" />		
+					<img class="photo" src="../../public/gallery/5.jpg" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/6.jpg" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/7.jpg" width="40" height="40" alt="" />		
+					<img class="photo" src="../../public/gallery/8.jpg" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/9.jpg" width="40" height="40" alt="" />
+				</a>
 				</aside>
 			</div>
 			<!--/правые блоки-->

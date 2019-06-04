@@ -40,11 +40,22 @@
 					Партнеры
 				</h4>
 			</aside>
-			<aside>
-				<h4 class="h4-b">
-					Фотоальбом
-				</h4>
-			</aside>
+				<aside>
+					<a href="/gallery" style="cursor: pointer; text-decoration: none; list-style: none; color: black;">
+					<h4 class="h4-b">
+						Фотоальбом
+					</h4>
+					<img class="photo" src="../../public/gallery/1.jpg" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/2.jpg" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/3.gif" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/4.jpg" width="40" height="40" alt="" />		
+					<img class="photo" src="../../public/gallery/5.jpg" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/6.jpg" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/7.jpg" width="40" height="40" alt="" />		
+					<img class="photo" src="../../public/gallery/8.jpg" width="40" height="40" alt="" />
+					<img class="photo" src="../../public/gallery/9.jpg" width="40" height="40" alt="" />
+				</a>
+				</aside>
 		</div>
 	</div>
 </div>
