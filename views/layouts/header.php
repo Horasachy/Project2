@@ -16,7 +16,7 @@
 			<div class="row">
 				<ul class="header_info">
 					<li><i class="fa fa-phone" aria-hidden="true"></i> <?=$row['phone'];?></li>
-					<li><i class="fa fa-envelope" aria-hidden="true"></i> <?=$row['email'];?></p></li>
+					<li><i class="fa fa-envelope" aria-hidden="true"></i><a style="color: white; text-decoration: none;" href="mailto:<?=$row['email'];?>"> <?=$row['email'];?></a> </p></li>
 				</ul>
 			</div>
 		</div>

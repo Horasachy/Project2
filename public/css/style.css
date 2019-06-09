@@ -327,7 +327,6 @@ a.photo:hover img{
 
 .btn-fb{
     padding: 10px 16px 10px 16px;
-    position: absolute;
     text-decoration: none;
     color: white;
     background: #109c83;
@@ -337,7 +336,7 @@ a.photo:hover img{
     transition: .7s;
 }
 .btn-fb:hover{
-    padding: 10px 16px 10px 16px;
+    padding: 11px 17px 11px 17px;
     text-decoration: none;
     color: #109c83;
     background: white;
@@ -519,7 +518,6 @@ a.photo:hover img{
 }
 
 .feedback{
-    height: 330px;
     margin-top: 30px;
     padding: 10px 20px 10px 20px;
     background: white;

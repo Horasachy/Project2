@@ -4,7 +4,7 @@
 						<div class="col-6">
 							<div class="row">
 								<div class="col-sm-6">
-									<u style="margin-left: 30px;">Тел:</u> 292-72-18<br>
+									<u style="margin-left: 30px;">Тел:</u>8(347) 292-72-18<br>
 									<u>Эл.почта:</u> <a href="mailto:bask-uc@mail.ru">bask-uc@mail.ru</a><br>
 									<a style="margin-left: 54px;" href="mailto:bask_sdo@mail.ru">bask_sdo@mail.ru</a>
 
