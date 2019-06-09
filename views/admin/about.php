@@ -14,12 +14,12 @@
 							<form method="POST" action="" id="AddContactsForm">
 								<h4 style="margin-bottom: 20px;">Редактирование контактной информации</h4>
 								<textarea onselect="storeCaret(this)" onclick="storeCaret(this)" onkeyup="storeCaret(this)" rows="10" id="ins-about" name="contacts" placeholder="Контактная информация:" class="form-control"></textarea>
-							<button type="button" onclick="insertText(document.getElementById('ins-about'),'<p></p>')">Обзац</button>
-							<button type="button" onclick="insertText(document.getElementById('ins-about'),'<em></em>')"><em>K</em></button>
-							<button type="button" onclick="insertText(document.getElementById('ins-about'),'<u></u>')"><u>Ч</u></button>
-							<button type="button" onclick="insertText(document.getElementById('ins-about'),'<b></b>')"><b>Ж</b></button>
-							<button type="button" onclick="insertText(document.getElementById('ins-about'),'<br>')">Отступ</button>
-							<button type="button" onclick="insertText(document.getElementById('ins-about'),'<a target=\'_blank\' href=\'Полная ссылка\'>Название ссылки</a>')">Ссылка</button><br><br>
+								<button type="button" onclick="insertText(document.getElementById('ins-about'),'<p></p>')">Обзац</button>
+								<button type="button" onclick="insertText(document.getElementById('ins-about'),'<em></em>')"><em>K</em></button>
+								<button type="button" onclick="insertText(document.getElementById('ins-about'),'<u></u>')"><u>Ч</u></button>
+								<button type="button" onclick="insertText(document.getElementById('ins-about'),'<b></b>')"><b>Ж</b></button>
+								<button type="button" onclick="insertText(document.getElementById('ins-about'),'<br>')">Отступ</button>
+								<button type="button" onclick="insertText(document.getElementById('ins-about'),'<a target=\'_blank\' href=\'Полная ссылка\'>Название ссылки</a>')">Ссылка</button><br><br>
 								<input class="addNews" type="submit" name="addContacts" value="Опубликовать">
 								<div class="errors"></div>
 							</form>
@@ -68,13 +68,13 @@
 							<form method="POST" action="" id="AddAccordionForm">
 								<h4 style="margin-bottom: 20px;">Добавление определения</h4>
 								<input type="text" class="form-control" name="accordion_title" placeholder="Заголовок:"><br>
-									<textarea onselect="storeCaret(this)" onclick="storeCaret(this)" onkeyup="storeCaret(this)" rows="10" id="ins-about-op" name="accordion_content" placeholder="Текст:" class="form-control"></textarea>
-							<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<p></p>')">Обзац</button>
-							<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<em></em>')"><em>K</em></button>
-							<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<u></u>')"><u>Ч</u></button>
-							<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<b></b>')"><b>Ж</b></button>
-							<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<br>')">Отступ</button>
-							<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<a target=\'_blank\' href=\'Полная ссылка\'>Название ссылки</a>')">Ссылка</button><br><br>
+								<textarea onselect="storeCaret(this)" onclick="storeCaret(this)" onkeyup="storeCaret(this)" rows="10" id="ins-about-op" name="accordion_content" placeholder="Текст:" class="form-control"></textarea>
+								<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<p></p>')">Обзац</button>
+								<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<em></em>')"><em>K</em></button>
+								<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<u></u>')"><u>Ч</u></button>
+								<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<b></b>')"><b>Ж</b></button>
+								<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<br>')">Отступ</button>
+								<button type="button" onclick="insertText(document.getElementById('ins-about-op'),'<a target=\'_blank\' href=\'Полная ссылка\'>Название ссылки</a>')">Ссылка</button><br><br>
 
 								<input class="addNews" type="submit" name="addAccordion" value="Опубликовать">
 							</form>

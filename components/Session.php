@@ -11,7 +11,7 @@ class Session{
 	**логина, перенаправляем его в личный кабинет*/
 	public static function 	noRepeatSingin(){
 		if (!empty($_SESSION['admin'])) {
-			header('Location:/myaccount');
+			header('Location:/adminNews');
 		}
 	}
 	//Выход из аккаунта

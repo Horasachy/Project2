@@ -20,19 +20,19 @@
 
 			<input class="submit_update" type="submit" name="submit" value="Редактировать">
 			<?if(!empty($this->page['errors'])):?>
-					<div class="errors">
-						<?=$this->page['errors'];?>
-					</div>	
+			<div class="errors">
+				<?=$this->page['errors'];?>
+			</div>	
 			<?endif;?>
 			<?if(!empty($this->page['success'])):?>
-					<div class="success">
-						<?=$this->page['success'];?>
-					</div>	
+			<div class="success">
+				<?=$this->page['success'];?>
+			</div>	
 			<?endif;?>			
 		</form>
 	</div><!-- /form  -->
-<script src="../../public/js/jquery.min.js"></script>
-<script src="../../public/js/all.js"></script>
-<script src="../../public/js/bootstrap.min.js"></script>
+	<script src="../../public/js/jquery.min.js"></script>
+	<script src="../../public/js/all.js"></script>
+	<script src="../../public/js/bootstrap.min.js"></script>
 </body>
 </html>
