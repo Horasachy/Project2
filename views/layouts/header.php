@@ -10,20 +10,20 @@
 </head>
 <body>
 	<!-- Контактная информация -->
+
 	<header class="header-top">
-		<div class="container-fluid" style="background-color: #10252e;">
+		<div class="container">
 			<div class="row">
 				<ul class="header_info">
 					<li><i class="fa fa-phone" aria-hidden="true"></i> <?=$row['phone'];?></li>
 					<li><i class="fa fa-envelope" aria-hidden="true"></i> <?=$row['email'];?></p></li>
 				</ul>
-				<div class="col-3">
-				</div>
 			</div>
 		</div>
 	</header>
 	<!-- Лого -->
-	<div class="container-fluid" style="margin-top: 10px;">
+
+		<div class="container">
 		<div class="row">
 			<div class="col-md-9">
 				<div class="logo">
@@ -42,6 +42,8 @@
 		</div>
 	</div>
 	<!-- Меню -->
+	<div class="clr-full">	
+		<div class="container">
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<a class="navbar-brand" href="/">BASK</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,4 +74,8 @@
 			</form>
 		</div>
 	</nav>		
+	</div>
+</div>
+</div>
+
 		<!-- Конец меню -->
